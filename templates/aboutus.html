@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+    body {
+                background-image: url(https://img.wallpapersafari.com/desktop/1680/1050/76/44/Afe4wp.jpg); no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+    }
+
+
+    h1 {color: red;}
+    h2 {color: yellow;
+    position: relative;
+    left: 50px;}
+    p {
+    color: white;
+    font-size: 150%;
+    word-wrap: break-word;
+   width: 1500px;
+   left: 50px;
+   position: relative;
+   }
+    </style>
+</head>
+<body>
+{% extends "home.html" %}
+
+{% block content %}
+<h1>About Us</h1>
+</br>
+</br>
+</br>
+<h2>Nathan Lee:</h2>
+<p></p>
+</br>
+<h2>Dane Vestal:</h2>
+<p> </p>
+</br>
+<h2>Noah Pidding:</h2>
+<p></p>
+</br>
+<h2>Aiden Tung:</h2>
+<p></p>
+{% endblock %}
+</body>
+</html>

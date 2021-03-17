@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>p2Cowboys</title>
+    <style>
+    .background {
+      background-image: url(https://img.wallpapersafari.com/desktop/1680/1050/76/44/Afe4wp.jpg);
+
+      height: 100%;
+      width: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    p {
+        color: white;
+        font-size: 150%;
+        top: 300px;
+        position: relative;
+        }
+    </style>
+
+</head>
+<body class="background">
+{% extends "home.html" %}
+
+{% block content %}
+<center><h1 class="headertitle">Wild West</h1></center>
+<center><p></p></center>
+<br/>
+<br/>
+<br/>
+<center><p>Creators:</p></center>
+<center><p>Nathan Lee, Dane Vestal, Noah Pidding, and Aiden Tung (Scrum Master)</p></center>
+{% endblock %}
+
+</body>
+</html>
