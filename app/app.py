@@ -1,19 +1,14 @@
 #imports
 
 from flask import Flask, render_template
+from social.home.app import social_home_bp
 
-#create "Flask"
 app = Flask(__name__)
+app.register_blueprint(social_home_bp, url_prefix='/social/home')
 
-#home
 @app.route('/')
 def home():
-    return render_template("homepage.html")
-
-#about us
-@app.route('/aboutus')
-def aboutus():
-    return render_template("aboutus.html")
+    return "Hello"
 
 #run file
 if __name__ == "__main__":
