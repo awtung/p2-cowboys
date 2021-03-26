@@ -1,7 +1,7 @@
 # P2-Cowboys
 
+#### Aiden Tung - https://github.com/awtung (Scrum Master)
 #### Nathan Lee - https://github.com/nathanlee27
-#### Aiden Tung - https://github.com/awtung
 #### Noah Pidding - https://github.com/NoahPidding
 #### Dane Vestal - 
 
@@ -15,7 +15,7 @@ Our scrum board consists of several columns in which we record our overall team 
 
 # Project Plan
 ### Members: 
-Aiden Tung, Dane Vestal, Nathan Lee, Noah Pidding
+Aiden Tung (scrum master), Dane Vestal, Nathan Lee, Noah Pidding
 ### Journals: 
 [Aiden's Journal]() | [Dane's Journal]() | [Nathan's Journal]() | [Noah's Journal](https://docs.google.com/document/d/1x-iEoBSRU_3NTZzQx9B2KsI-111CswKRkTgCjxuuqH4/edit?usp=sharing)
 
