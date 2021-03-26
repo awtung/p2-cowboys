@@ -2,21 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>p2Cowboys</title>
     <style>
-    .background {
-      background-image: url(https://i.ytimg.com/vi/7fg7w04B6fQ/maxresdefault.jpg);
-
-      height: 100%;
-      width: 100%;
-
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
+    body {
+      background-image: url(https://i.ytimg.com/vi/7fg7w04B6fQ/maxresdefault.jpg); no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
       background-size: cover;
     }
+
     p {
         color: white;
         font-size: 150%;
@@ -26,7 +22,7 @@
     </style>
 
 </head>
-<body class="background">
+<body>
 {% extends "home.html" %}
 
 {% block content %}
