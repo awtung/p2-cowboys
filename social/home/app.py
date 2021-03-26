@@ -9,3 +9,18 @@ social_home_bp = Blueprint('aboutus', __name__,
 def aboutus():
     return render_template("aboutus.html")
 
+@social_home_bp.route('/AidenTung')
+def Aiden():
+    return render_template("Aiden.html")
+
+@social_home_bp.route('/NathanLee')
+def Nathan():
+    return render_template("Nathan.html")
+
+@social_home_bp.route('/DaneVestal')
+def Dane():
+    return render_template("Dane.html")
+
+@social_home_bp.route('/NoahPidding')
+def Noah():
+    return render_template("Noah.html")
