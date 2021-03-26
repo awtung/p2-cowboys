@@ -41,7 +41,7 @@ Explanation:
 
 [Nathan's Ticket]()
 
-Explanation:
+Explanation: We are going to have a chat feature where you can chat with other users on our website.
 
 [Noah's Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-57731902)
 
