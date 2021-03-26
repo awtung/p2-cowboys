@@ -43,6 +43,6 @@ Explanation:
 
 Explanation:
 
-[Noah's Ticket]()
+[Noah's Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-57731902)
 
-Explanation:
+Explanation: Frontend Code with Aiden. (more detailed explanation in scrum board)
