@@ -31,7 +31,7 @@ Our group is going with a website with the features similar to those of popular 
 
 ## Tickets and Explanations
 
-[Aiden's Ticket]()
+[Aiden's Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-57731912)
 
 Explanation:
 
