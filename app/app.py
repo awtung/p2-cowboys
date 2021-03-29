@@ -18,6 +18,7 @@ app.register_blueprint(MiniLabs_Nathan_bp, url_prefix='/NathanLab')
 app.register_blueprint(MiniLabs_Dane_bp, url_prefix='/DaneLab')
 app.register_blueprint(MiniLabs_Aiden_bp, url_prefix='/AidenLab')
 
+
 @app.route('/')
 def home():
     return render_template("homepage.html")
