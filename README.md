@@ -33,16 +33,16 @@ Our group is going with a website with the features similar to those of popular 
 
 [Aiden's Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-57731912)
 
-Explanation: Frontend Code (more in depth explanaton on scrum board)
+Explanation: Frontend Code (Homepage)
 
 [Dane's Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-57939094)
 
-Explanation: Work on chat & add timers
+Explanation: Chat & timers
 
 [Nathan's Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-57731909)
 
-Explanation: We are going to have a chat feature where you can chat with other users on our website.
+Explanation: User login
 
 [Noah's Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-57731902)
 
-Explanation: Frontend Code (About Us). (more detailed explanation in scrum board)
+Explanation: Frontend Code (About Us)
