@@ -33,7 +33,7 @@ Our group is going with a website with the features similar to those of popular 
 
 [Aiden's Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-57731912)
 
-Explanation:Frontend Code (more in depth explanaton on scrum board)
+Explanation: Frontend Code (more in depth explanaton on scrum board)
 
 [Dane's Ticket]()
 
