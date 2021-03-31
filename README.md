@@ -39,7 +39,7 @@ Explanation:Frontend Code (more in depth explanaton on scrum board)
 
 Explanation:
 
-[Nathan's Ticket]()
+[Nathan's Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-57731909)
 
 Explanation: We are going to have a chat feature where you can chat with other users on our website.
 
