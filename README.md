@@ -45,4 +45,4 @@ Explanation: We are going to have a chat feature where you can chat with other u
 
 [Noah's Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-57731902)
 
-Explanation: Frontend Code with Aiden. (more detailed explanation in scrum board)
+Explanation: Frontend Code (About Us). (more detailed explanation in scrum board)
