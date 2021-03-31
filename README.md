@@ -35,9 +35,9 @@ Our group is going with a website with the features similar to those of popular 
 
 Explanation: Frontend Code (more in depth explanaton on scrum board)
 
-[Dane's Ticket]()
+[Dane's Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-57939094)
 
-Explanation:
+Explanation: Work on chat & add timers
 
 [Nathan's Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-57731909)
 
