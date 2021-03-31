@@ -18,11 +18,12 @@ app.register_blueprint(MiniLabs_Nathan_bp, url_prefix='/NathanLab')
 app.register_blueprint(MiniLabs_Dane_bp, url_prefix='/DaneLab')
 app.register_blueprint(MiniLabs_Aiden_bp, url_prefix='/AidenLab')
 
+
 @app.route('/')
 def home():
     return render_template("homepage.html")
 
 #run file
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(debug = True, port='8080', host='192.168.1.5')
 
