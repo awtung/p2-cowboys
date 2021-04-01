@@ -11,37 +11,35 @@
         </div>
 
         <!-- Input and Content -->
-        <div class="jumbotron text-center row">
-            <div class="col-md-6">
-                <h3>Type the nth number in the Factorial sequence?</h3>
-                <img class="img-responsive py-3" src="/static/assets/Fibonacci_spiral.svg" alt="" width="25%" height="Auto">
-                <form id="fibForm" action="/MiniLabs/Noah/NoahLab" method="POST" >
+        <div>
+            <div class="text-center">
+                <h3>Enter a number 2 to 100 for the Factorial sequence below:</h3>
+                </br>
+                <form id="facForm" action="/MiniLabs/Noah/NoahLab" method="POST" >
                     <input name="series" id="series" type="number" min="2" max="100" >
-                    <button>Go!</button>
+                    <button>Start!</button>
                 </form>
             </div>
-
-            <div class="col-md-6">
-                <h3>Factorial series for {{factorial.series}}</h3>
+            </br>
+            </br>
+            <div>
+                <h2 style = "text-align:center">Factorial series for <span style = "color: red"> {{factorial.series}}</span>: </h2>
                 <!-- Number, List table -->
-                <table class="mx-auto">
-                    <tr>
-                        <th scope="col">Number</th>
-                        <th scope="col">List</th>
-                    </tr>
-                    <tr>
-                        <td>{{factorial.number}}</td>
-                        <td>{{factorial.list}}</td>
-                    </tr>
-                </table>
+                <div style = "margin-left: 100px">
+                <h3><strong>Number</strong></h3>
+                <p>{{factorial.number}}</p>
+                <h3><strong>List</strong></h3>
+                <p>{{factorial.list}}</p>
+                </div>
             </div>
         </div>
 
         <!-- Sequence -->
         <div class="col-12" style="text-align: left; ">
             <!-- Series -->
-            <h3>Factorial build up for series: {{factorial.series}} number: {{factorial.number}}</h3>
-            <div class="overflow-auto" style="height: 200px">
+            <h3 style = "text-align:center">Factorial build up for series:
+                <span style = "color:red">{{factorial.series}}</span> number: <span style = "color: red">{{factorial.number}}</span></h3>
+            <div class="overflow-auto" style="height: 350px">
                 {% for i in range(factorial.series) %}
                 <h5>{{factorial.get_sequence(i)}}</h5>
                 {% endfor %}
@@ -58,6 +56,16 @@
     }
     td, th {
         text-align:left;
+    }
+    body {
+      background-image: url(https://i.ytimg.com/vi/dDJQ-jqHFm0/maxresdefault.jpg); no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .text-center {
+      text-align: center;
     }
 </style>
 {% endblock %}
