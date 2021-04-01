@@ -16,7 +16,7 @@ app.register_blueprint(chat_bp, url_prefix='/chat')
 app.register_blueprint(MiniLabs_Noah_bp, url_prefix='/MiniLabs/Noah')
 app.register_blueprint(MiniLabs_Nathan_bp, url_prefix='/NathanLab')
 app.register_blueprint(MiniLabs_Dane_bp, url_prefix='/DaneLab')
-app.register_blueprint(MiniLabs_Aiden_bp, url_prefix='/AidenLab')
+app.register_blueprint(MiniLabs_Aiden_bp, url_prefix='/MiniLabs/Aiden')
 
 
 @app.route('/')
