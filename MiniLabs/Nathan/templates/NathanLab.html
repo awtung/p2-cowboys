@@ -1,10 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "home.html" %}
 
-</body>
-</html>
+{% block content %}
+<div class="container">
+
+    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+        <!-- Title -->
+        <div class="col-12" style="text-align: center; color: white">
+            <h1><strong>Square Root series in Python</strong></h1>
+        </div>
+
+        <!-- Input and Content -->
+        <div>
+            <div class="text-center">
+                <h3>Enter a number 4 to 100000 for the Sqaure Root sequence below:</h3>
+                </br>
+                <form id="facForm" action="/MiniLabs/Nathan/NathanLab" method="POST" >
+                    <input name="series" id="series" type="number" min="4" max="100000" >
+                    <button type="submit" class="button">Start!</button>
+                </form>
+            </div>
+            </br>
+            </br>
+            <div>
+                <h2 style = "text-align:center; color: white">Square Root series for <span style = "color: red"> {{sqrt.series}}</span>: </h2>
+                <!-- Number, List table -->
+                <div style = "margin-left: 100px; color: white">
+                    <h3><strong>Number</strong></h3>
+                    <p>{{sqrt.number}}</p>
+                    <h3><strong>List</strong></h3>
+                    <p>{{sqrt.list}}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sequence -->
+        <div class="col-12" style="text-align: left; ">
+            <!-- Series -->
+            <h3 style = "text-align:center; color: white">Square Root build up for series:
+                <span style = "color:red">{{sqrt.series}}</span> number: <span style = "color: red">{{sqrt.number}}</span></h3>
+            <div class="overflow-auto" style="height: 350px; color:white">
+                {% for i in range(sqrt.series) %}
+                <h5>{{sqrt.get_sequence(i)}}</h5>
+                {% endfor %}
+            </div>
+            <!-- Code -->
+        </div>
+    </div>
+
+</div>
+</div>
+<style>
+    table, td, th {
+        border: 1px solid var(--dblue);
+    }
+    td, th {
+        text-align:left;
+    }
+    body {
+      background-image: url(https://cdna.artstation.com/p/assets/images/images/015/163/236/large/bernardo-rebello-reis-oldwest.jpg); no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .text-center {
+      text-align: center;
+      color: white
+    }
+          .button {
+        background-color: #1c87c9;
+        -webkit-border-radius: 60px;
+        border-radius: 60px;
+        border: none;
+        color: #eeeeee;
+        cursor: pointer;
+        display: inline-block;
+        font-family: sans-serif;
+        font-size: 20px;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+      }
+      @keyframes glowing {
+        0% {
+          background-color: #2ba805;
+          box-shadow: 0 0 5px #2ba805;
+        }
+        50% {
+          background-color: #49e819;
+          box-shadow: 0 0 20px #49e819;
+        }
+        100% {
+          background-color: #2ba805;
+          box-shadow: 0 0 5px #2ba805;
+        }
+      }
+      .button {
+        animation: glowing 1300ms infinite;
+      }
+</style>
+{% endblock %}
