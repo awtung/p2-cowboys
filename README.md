@@ -22,6 +22,44 @@ Aiden Tung (scrum master), Dane Vestal, Nathan Lee, Noah Pidding
 
 Our group is going with a website with the features similar to those of popular social media apps, including instagram and facebook, where we are going to attempt to allow users to upload images onto our website so they can be shared. Also we may attempt to add some sort of chat feature, where users are able to chat with one another while on our website. This is just a start, and we will probably have to come up with more features that would be a good fit for our website, as these current features mentioned 
 
+# Week 2
+## Mini Labs:
+### Aiden's Mini Lab
+[Link to code]()
+#### Binary Grading
+1) Blueprint:
+2) Class:
+3) Object:
+4) Data / Getters:
+5) WOW:
+
+### Dane's Mini Lab
+[Link to code]()
+#### Binary Grading
+1) Blueprint:
+2) Class:
+3) Object:
+4) Data / Getters:
+5) WOW:
+
+### Nathan's Mini Lab
+[Link to code]()
+#### Binary Grading
+1) Blueprint:
+2) Class:
+3) Object:
+4) Data / Getters:
+5) WOW:
+
+### Noah's Mini Lab
+[Link to code]()
+#### Binary Grading
+1) Blueprint:
+2) Class:
+3) Object:
+4) Data / Getters:
+5) WOW:
+
 # Week 1 
 ## Team Goals (Week 1)
 1) Come up with a project idea for the trimester, which we all agree on and invloves growth
