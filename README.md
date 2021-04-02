@@ -66,7 +66,7 @@ Our group is going with a website with the features similar to those of popular 
 2) Class: I made the class "Factorial" in replace of Mr M's Fibonacci class
 3) Object: I made the object "factorial" from the class "Factorial"
 4) Data / Getters: Used getters to be able to get data from the object "factorial" and then displayed the data by rendering it on an html file
-5) WOW:
+5) WOW: HTML code is nicely formatted, with nice themed background, animated title and a easy to navigate UI that allows the user to input a number for the series and the page will display the final number in the series, the whole list of the series and the build up of each number in the sequence. 
 
 # Week 1 
 ## Team Goals (Week 1)
