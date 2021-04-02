@@ -58,14 +58,14 @@ Our group is going with a website with the features similar to those of popular 
 5) WOW:
 
 ### Noah's Mini Lab /5
-[Link to app.py code]() |
-[Link to py code]() |
-[Link to html code]()
+[Link to app.py code](https://github.com/awtung/p2-cowboys/blob/75a04dee0a8e0abea1f6690c6428a35136e01a70/MiniLabs/Noah/app.py#L1-L11) |
+[Link to py code](https://github.com/awtung/p2-cowboys/blob/46252db94636fdb8d4bd9656bbd12104173fc732/MiniLabs/Noah/Noah.py#L1-L68) |
+[Link to html code](https://github.com/awtung/p2-cowboys/blob/75a04dee0a8e0abea1f6690c6428a35136e01a70/MiniLabs/Noah/templates/NoahLab.html#L1-L71)
 #### Binary Grading
 1) Blueprint: Created a folder called "MiniLabs" and put another folder called "Noah" where I could store my necessary files for my Mini Lab
 2) Class: I made the class "Factorial" in replace of Mr M's Fibonacci class
-3) Object: 
-4) Data / Getters:
+3) Object: I made the object "factorial" from the class "Factorial"
+4) Data / Getters: Used getters to be able to get data from the object "factorial" and then displayed the data by rendering it on an html file
 5) WOW:
 
 # Week 1 
