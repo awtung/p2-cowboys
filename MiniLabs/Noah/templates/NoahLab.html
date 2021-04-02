@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-{% extends "home.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Noah's Mini Lab</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+{% extends "home.html" %}]
 
 {% block content %}
 <div class="container">
@@ -7,7 +13,7 @@
     <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
         <!-- Title -->
         <div class="col-12" style="text-align: center;">
-            <marquee behavior=alternate width=”202″ scrollamount=”8″ scrolldelay=”95″ height=”85″ bgcolor=”orange”>Factorial Series in Python</marquee>
+            <marquee behavior=alternate width=”202″ scrollamount=”10px″ scrolldelay=”70″ height=”85px″ bgcolor=”#FF00FF”>Factorial Series in Python</marquee>
         </div>
 
         <!-- Input and Content -->
@@ -49,7 +55,7 @@
     </div>
 
 </div>
-</div>
+
 <style>
     table, td, th {
         border: 1px solid var(--dblue);
