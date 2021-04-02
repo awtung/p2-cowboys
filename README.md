@@ -54,9 +54,9 @@ Our group is going with a website with the features similar to those of popular 
 ### Noah's Mini Lab /5
 [Link to code]()
 #### Binary Grading
-1) Blueprint:
-2) Class:
-3) Object:
+1) Blueprint: Created a folder called "MiniLabs" and put another folder called "Noah" where I could store my necessary files for my Mini Lab
+2) Class: I made the class "Factorial" in replace of Mr M's Fibonacci class
+3) Object: 
 4) Data / Getters:
 5) WOW:
 
