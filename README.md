@@ -24,7 +24,7 @@ Our group is going with a website with the features similar to those of popular 
 
 # Week 2
 ## Mini Labs:
-### Aiden's Mini Lab
+### Aiden's Mini Lab /5
 [Link to code]()
 #### Binary Grading
 1) Blueprint:
@@ -33,7 +33,7 @@ Our group is going with a website with the features similar to those of popular 
 4) Data / Getters:
 5) WOW:
 
-### Dane's Mini Lab
+### Dane's Mini Lab /5
 [Link to code]()
 #### Binary Grading
 1) Blueprint:
@@ -42,7 +42,7 @@ Our group is going with a website with the features similar to those of popular 
 4) Data / Getters:
 5) WOW:
 
-### Nathan's Mini Lab
+### Nathan's Mini Lab /5
 [Link to code]()
 #### Binary Grading
 1) Blueprint:
@@ -51,7 +51,7 @@ Our group is going with a website with the features similar to those of popular 
 4) Data / Getters:
 5) WOW:
 
-### Noah's Mini Lab
+### Noah's Mini Lab /5
 [Link to code]()
 #### Binary Grading
 1) Blueprint:
