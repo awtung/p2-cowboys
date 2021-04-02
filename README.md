@@ -25,24 +25,24 @@ Our group is going with a website with the features similar to those of popular 
 # Week 2
 ## Mini Labs:
 ### Aiden's Mini Lab /5
-[Link to app.py code]() |
-[Link to py code]() |
-[Link to html code]()
+[Link to app.py code](https://github.com/awtung/p2-cowboys/blob/main/MiniLabs/Aiden/app.py) |
+[Link to py code](https://github.com/awtung/p2-cowboys/blob/main/MiniLabs/Aiden/Aiden.py) |
+[Link to html code](https://github.com/awtung/p2-cowboys/blob/main/MiniLabs/Aiden/templates/AidenLab.html)
 #### Binary Grading
-1) Blueprint:
-2) Class:
-3) Object:
-4) Data / Getters:
-5) WOW:
+1) Blueprint: Made a folder called "Aiden" within the minilabs folder where I had each of my own files to work on my minilab
+2) Class: I made the class "Power2" in replace of Mr M's Fibonacci class
+3) Object: I made the object "power2" from the class "Power2"
+4) Data / Getters: I used getters to get data from the object I created called "power2" and then displayed this data by rendering it onto my html file called "AidenLab.html"
+5) WOW: HTML code is formatted well onto a nice western themed background image that relates to our Cowboy styled project. My WOW was the animated title that bounces back and forth on the screen and also a title that flows from the right to the left giving it a nice animated UI. 
 
 ### Dane's Mini Lab /5
 [Link to app.py code]() |
 [Link to py code]() |
 [Link to html code]()
 #### Binary Grading
-1) Blueprint:
-2) Class:
-3) Object:
+1) Blueprint: 
+2) Class:  
+3) Object: 
 4) Data / Getters:
 5) WOW:
 
