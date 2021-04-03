@@ -1,16 +1,6 @@
-class dog:
-    attribute1 = "grey"
-    attribute2 = "male"
-
-
-c1 = dog()
-
-
-
-if __name__ == "__main__":
-
-
-
-
-    print(c1.attribute1)
-    print(c1.attribute2)
+class triangle:
+    def __init__(self, length, height ):
+        self.length = length
+        self.height = height
+def get_area(self):
+    return self.length * self.height
