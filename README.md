@@ -47,15 +47,15 @@ Our group is going with a website with the features similar to those of popular 
 5) WOW:
 
 ### Nathan's Mini Lab /5
-[Link to app.py code]() |
-[Link to py code]() |
-[Link to html code]()
+[Link to app.py code](https://github.com/awtung/p2-cowboys/blob/4b74e70458a61d75bd15159e59e18d83b6e7db37/MiniLabs/Nathan/app.py#L1-L11) |
+[Link to py code](https://github.com/awtung/p2-cowboys/blob/4b74e70458a61d75bd15159e59e18d83b6e7db37/MiniLabs/Nathan/Nathan.py#L1-L72) |
+[Link to html code](https://github.com/awtung/p2-cowboys/blob/4b74e70458a61d75bd15159e59e18d83b6e7db37/MiniLabs/Nathan/templates/NathanLab.html#L1-L110)
 #### Binary Grading
-1) Blueprint:
-2) Class:
-3) Object:
-4) Data / Getters:
-5) WOW:
+1) Blueprint: A folder made called "Nathan" in our minilabs folder where I have my work for the minilab
+2) Class: I made class "Sqrt" instead of the fibonaci series
+3) Object: I made an object sqrt from the class Sqrt
+4) Data / Getters: I used getters to get data from the object I created called "sqrt" to display this data by rendering it onto my html file called "NathanLab.html"
+5) WOW: Not really have anything but put a green flashing button for the ok button
 
 ### Noah's Mini Lab /5
 [Link to app.py code](https://github.com/awtung/p2-cowboys/blob/75a04dee0a8e0abea1f6690c6428a35136e01a70/MiniLabs/Noah/app.py#L1-L11) |
