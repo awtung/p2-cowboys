@@ -36,9 +36,9 @@ Our group is going with a website with the features similar to those of popular 
 5) WOW: HTML code is formatted well onto a nice western themed background image that relates to our Cowboy styled project. My WOW was the animated title that bounces back and forth on the screen and also a title that flows from the right to the left giving it a nice animated UI. 
 
 ### Dane's Mini Lab /5
-[Link to app.py code]() |
-[Link to py code]() |
-[Link to html code]()
+[Link to app.py code](https://github.com/awtung/p2-cowboys/blob/92da7faff8fc1f75c7b1a206ef006334deb41a32/MiniLabs/Dane/app.py#L1-L29) |
+[Link to py code](https://github.com/awtung/p2-cowboys/blob/92da7faff8fc1f75c7b1a206ef006334deb41a32/MiniLabs/Dane/Dane.py#L1-L6) |
+[Link to html code](https://github.com/awtung/p2-cowboys/blob/92da7faff8fc1f75c7b1a206ef006334deb41a32/MiniLabs/Dane/templates/DaneLab.html#L1-L18)
 #### Binary Grading
 1) Blueprint: 
 2) Class:  
