@@ -57,7 +57,7 @@ Our group is going with a website with the features similar to those of popular 
 4) Data / Getters: I used getters to get data from the object I created called "sqrt" to display this data by rendering it onto my html file called "NathanLab.html"
 5) WOW: Not really have anything but put a green flashing button for the ok button
 
-### Noah's Mini Lab /5
+### Noah's Mini Lab 5/5
 [Link to app.py code](https://github.com/awtung/p2-cowboys/blob/75a04dee0a8e0abea1f6690c6428a35136e01a70/MiniLabs/Noah/app.py#L1-L11) |
 [Link to py code](https://github.com/awtung/p2-cowboys/blob/46252db94636fdb8d4bd9656bbd12104173fc732/MiniLabs/Noah/Noah.py#L1-L68) |
 [Link to html code](https://github.com/awtung/p2-cowboys/blob/75a04dee0a8e0abea1f6690c6428a35136e01a70/MiniLabs/Noah/templates/NoahLab.html#L1-L71)
