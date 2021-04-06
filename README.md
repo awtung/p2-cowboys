@@ -24,7 +24,7 @@ Our group is going with a website with the features similar to those of popular 
 
 # Week 2
 ## Mini Labs:
-### Aiden's Mini Lab /5
+### Aiden's Mini Lab 5/5
 [Link to app.py code](https://github.com/awtung/p2-cowboys/blob/main/MiniLabs/Aiden/app.py) |
 [Link to py code](https://github.com/awtung/p2-cowboys/blob/main/MiniLabs/Aiden/Aiden.py) |
 [Link to html code](https://github.com/awtung/p2-cowboys/blob/main/MiniLabs/Aiden/templates/AidenLab.html)
@@ -46,7 +46,7 @@ Our group is going with a website with the features similar to those of popular 
 4) Data / Getters:
 5) WOW:
 
-### Nathan's Mini Lab /5
+### Nathan's Mini Lab 5/5
 [Link to app.py code](https://github.com/awtung/p2-cowboys/blob/4b74e70458a61d75bd15159e59e18d83b6e7db37/MiniLabs/Nathan/app.py#L1-L11) |
 [Link to py code](https://github.com/awtung/p2-cowboys/blob/4b74e70458a61d75bd15159e59e18d83b6e7db37/MiniLabs/Nathan/Nathan.py#L1-L72) |
 [Link to html code](https://github.com/awtung/p2-cowboys/blob/4b74e70458a61d75bd15159e59e18d83b6e7db37/MiniLabs/Nathan/templates/NathanLab.html#L1-L110)
