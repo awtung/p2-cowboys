@@ -6,7 +6,7 @@
 #### Dane Vestal - 
 
 # Link to Website
-[WANTED]()
+[WANTED]()(Not deployed yet)
 
 # Scrum Board Overview
 [Scrum Board](https://github.com/awtung/p2-cowboys/projects/1)
