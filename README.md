@@ -30,10 +30,10 @@ Our group is going with a website with the features similar to those of popular 
 [Link to html code](https://github.com/awtung/p2-cowboys/blob/main/MiniLabs/Aiden/templates/AidenLab.html)
 #### Binary Grading
 1) Blueprint: Made a folder called "Aiden" within the minilabs folder where I had each of my own files to work on my minilab
-2) Class: I made the class "Power2" in replace of Mr M's Fibonacci class
-3) Object: I made the object "power2" from the class "Power2"
-4) Data / Getters: I used getters to get data from the object I created called "power2" and then displayed this data by rendering it onto my html file called "AidenLab.html"
-5) WOW: HTML code is formatted well onto a nice western themed background image that relates to our Cowboy styled project. My WOW was the animated title that bounces back and forth on the screen and also a title that flows from the right to the left giving it a nice animated UI. 
+2) Class ([Code](https://github.com/awtung/p2-cowboys/blob/33d042550aa83db0bdbba639ae1d5fdc91e102b0/MiniLabs/Aiden/Aiden.py#L4)): I made the class "Power2" in replace of Mr M's Fibonacci class
+3) Object ([Code](https://github.com/awtung/p2-cowboys/blob/33d042550aa83db0bdbba639ae1d5fdc91e102b0/MiniLabs/Aiden/Aiden.py#L60)) : I made the object "power2" from the class "Power2"
+4) Data / Getters ([Code](https://github.com/awtung/p2-cowboys/blob/b33ca52c412e3929745412b3212467e41f83d41f/MiniLabs/Aiden/Aiden.py#L37-L68)): I used getters to get data from the object I created called "power2" and then displayed this data by rendering it onto my html file called "AidenLab.html"
+5) WOW ([Code](https://github.com/awtung/p2-cowboys/blob/226620676fbed698092a63ca544042da6507d1ad/MiniLabs/Aiden/templates/AidenLab.html#L18)): HTML code is formatted well onto a nice western themed background image that relates to our Cowboy styled project. My WOW was the animated title that bounces back and forth on the screen and also a title that flows from the right to the left giving it a nice animated UI. 
 
 ### Dane's Mini Lab /5
 [Link to app.py code](https://github.com/awtung/p2-cowboys/blob/92da7faff8fc1f75c7b1a206ef006334deb41a32/MiniLabs/Dane/app.py#L1-L29) |
