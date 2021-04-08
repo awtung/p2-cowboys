@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,6 @@
     <title>Dane's Mini Lab</title>
 </head>
 <body>
-
 <form method="POST"  action="/DaneLab">
     <h2>Area</h2>
     <div>
@@ -16,4 +16,79 @@
     </div>
     <p style="font-size:2vw;"><td><input type="submit" value="click here to search = {{area}}" /> </td>
 </form>.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dane's Mini Lab</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+{% extends "home.html" %}
+
+{% block content %}
+
+
+<div class="container">
+
+        <!-- Input and Content -->
+        <div>
+            <div class="col-md-6">
+                <form id="fibForm" action="/MiniLabs/Dane/DaneLab" method="POST" >
+                    <input name="series" id="series" type="number" min="2" max="100" >
+                    <button>Go</button>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <h3>Cube for {{power3.series}}</h3>
+                <!-- Number, List table -->
+                <table class="mx-auto">
+                    <tr>
+                        <th scope="col">Number</th>
+                        <th scope="col">List</th>
+                    </tr>
+                    <tr>
+                        <td>{{power3.number}}</td>
+                        <td>{{power3.list}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Sequence -->
+        <div class="col-12" style="text-align: left; ">
+            <!-- Series -->
+            <h2>Power build up for series: {{power3.series}} number: {{power3.number}}</h2>
+            <div class="overflow-auto" style="height: 200px">
+                {% for i in range(power3.series) %}
+                <h5>{{power3.get_sequence(i)}}</h5>
+                {% endfor %}
+            </div>
+            <!-- Code -->
+        </div>
+    </div>
+
+</div>
+</div>
+<style>
+   body {
+background-image: url(https://png.pngtree.com/thumb_back/fh260/back_our/20200630/ourmid/pngtree-desert-background-for-vacation-travel-image_341709.jpg); no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+table, td, th {
+        border: 1px solid var(--dblue);
+    }
+    td, th {
+        text-align:left;
+    }
+
+</style>
+{% endblock %}
+</html>
 
