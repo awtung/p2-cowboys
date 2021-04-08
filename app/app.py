@@ -8,7 +8,7 @@ from MiniLabs.Noah.app import MiniLabs_Noah_bp
 from MiniLabs.Nathan.app import MiniLabs_Nathan_bp
 from MiniLabs.Dane.app import MiniLabs_Dane_bp
 from MiniLabs.Aiden.app import MiniLabs_Aiden_bp
-from flask_wtf.csrf import CSRFProtect
+
 
 
 app = Flask(__name__)
