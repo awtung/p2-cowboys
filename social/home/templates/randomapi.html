@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>p2Cowboys</title>
+    <style>
+    body {
+      background-image: url(https://i.ytimg.com/vi/7fg7w04B6fQ/maxresdefault.jpg); no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    p {
+        color: white;
+        font-size: 150%;
+        top: 300px;
+        position: relative;
+        }
+    </style>
+
+</head>
+<body>
+{% extends "home.html" %}
+
+{% block content %}
+<center><h1 class="headertitle" style = "color:black"><marquee behavior=alternate width=”202″ scrollamount=”8″ scrolldelay=”95″ height=”37″ bgcolor=”#FFFFFF”> Random API's</marquee></h1></center>
+<center><p></p></center>
+
+<h1 style="color:Green;">Random Quote</h1>
+<p style="background-color:black; color:blue; margin-right:1200px; font:impact; font-size:20px">{{quote}}</p>
+<p class="setup" style="color:Green">Click for quote.</p>
+<form method="POST" ID="myForm" action=/randomapi/ >
+    <input type="submit" value="New Quote">
+</form>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+</body>
+</html>

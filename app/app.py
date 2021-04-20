@@ -26,6 +26,33 @@ app.register_blueprint(MiniLabs_Aiden_bp, url_prefix='/MiniLabs/Aiden')
 def home():
     return render_template("homepage.html")
 
+@app.route('/randomapi/', methods=['GET', 'POST'])
+def quote():
+    # call to random quote web api
+    import requests
+    import random
+
+    url = "https://quotes15.p.rapidapi.com/quotes/random/"
+
+    querystring = {"language_code":"en"}
+
+    headers = {
+        'x-rapidapi-key': "be43b38cedmsh17c4689e2c1a95fp18da84jsnd77b7103f602",
+        'x-rapidapi-host': "quotes15.p.rapidapi.com"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    #quote = response.text
+
+    start1 = 'ent":'
+    end1 = ',"ur'
+    quote1 = response.text[response.text.find(start1)+len(start1):response.text.find(end1)+len(start1)-5]
+
+    quote = quote1 + " - " + random.choice(['Noah Pidding','Nathan Lee','Aiden Tung'])
+
+    return render_template("randomapi.html", Title="Home", loginUsername='', logged_in=0, quote=quote)
+
 #run file
 if __name__ == "__main__":
      app.run(debug=True, port='5000', host='127.0.0.1')
