@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <title>Dane</title>
+    <title>About Us</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+    body {
+                background-image: url(https://img.wallpapersafari.com/desktop/1680/1050/76/44/Afe4wp.jpg); no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+    }
+
+    img {
+    float: left;
+    }
+
+    h1 {color: yellow;
+    position: relative;
+    top: 50px;
+    }
+    h2 {color: mediumspringgreen;
+    position: relative;
+    left: 50px;}
+    p {
+    color: orange;
+    font-size: 150%;
+    word-wrap: break-word;
+    width: 1500px;
+    left: 50px;
+    position: relative;
+    margin-left: 500px;
+    }
+    </style>
 </head>
 <body>
+{% extends "home.html" %}
 
+{% block content %}
+<h1>Dane Vestal</h1>
+</br>
+</br>
+</br>
+<img src="" alt="Dane pfp" style="width:400px; height:550px; position:relative; left: 50px"><p> Start </p>
+</br>
+{% endblock %}
 </body>
 </html>
