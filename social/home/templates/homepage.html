@@ -12,6 +12,9 @@
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
+      background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed
     }
 
     p {
@@ -20,6 +23,9 @@
         top: 300px;
         position: relative;
         }
+    .BgClass {
+    background-image: url('https://i.ibb.co/jWRw91t/Screenshot-2021-04-20-153019-2.png');
+    }
     </style>
 
 </head>
@@ -27,6 +33,14 @@
 {% extends "home.html" %}
 
 {% block content %}
+<input style="float:right; margin-top: 50px; margin-bottom: -50px" type="button" id="btnBack" value="Toggle Dark Mode" />
+
+<script>
+    var btnBack = document.getElementById('btnBack');
+btnBack.addEventListener('click',function() {
+    document.body.classList.toggle('BgClass');
+});
+</script>
 <center><h1 class="headertitle" style = "color:black"><marquee behavior=alternate width=”202″ scrollamount=”8″ scrolldelay=”95″ height=”37″ bgcolor=”#FFFFFF”> 💥 WANTED 💥</marquee></h1></center>
 <center><p></p></center>
 <center><p>Welcome to "Wanted", the social media website of new and constantly evolving features</p></center>
@@ -35,15 +49,9 @@
 <br/>
 <center><p>Creators:</p></center>
 <center><p>Nathan Lee, Dane Vestal, Noah Pidding, and Aiden Tung (Scrum Master)</p></center>
+
+
 {% endblock %}
-
-
-
-
-
-
-
-
 
 </body>
 </html>
