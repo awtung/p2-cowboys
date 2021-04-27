@@ -19,11 +19,11 @@ class Sqrt:
         # Instant end = Instant.now();    // time capture -- end
         # this.timeElapsed = Duration.between(start, end);
 
-    """Algorithm for building Sqaure Root sequence, this id called from __init__"""
+    """Algorithm for building Square Root sequence, this id called from __init__"""
 
     def calc_series(self):
         limit = self._series
-        f = [1000000]  # Factorial starting array/list
+        f = [1000000]  # Square Root starting array/list
         while limit > 0:
             self.set_data(f[0])
             f = [math.sqrt(f[0])]
