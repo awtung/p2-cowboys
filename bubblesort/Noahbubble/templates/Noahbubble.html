@@ -2,9 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Noah's Mini Lab</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
+{% extends "home.html" %}]
 
-</body>
+{% block content %}
+<div class="container">
+
+    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+        <!-- Title -->
+        <div class="col-12" style="text-align: center;">
+            <marquee behavior=alternate width=”202″ scrollamount=”10px″ scrolldelay=”70″ height=”85px″ bgcolor=”#FF00FF”>Factorial Series in Python</marquee>
+        </div>
+
+        <!-- Input and Content -->
+        <div>
+            <div class="text-center">
+                <h3>Enter numbers to be sorted:</h3>
+                </br>
+                <form method = "post">
+                    <!-- user message input -->
+                    <p><input class="textbox1" name="Noahbubble" required> </p>
+
+                    <!-- shows buttons, gives them functions -->
+                    <p><button class = "button button1" formaction = "/Noah_bubble/">Encrypt</button></p>
+
+                    <p>The result is: </p>
+
+                    <!-- output -->
+                    <p class="output">{{ display }}</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    table, td, th {
+        border: 1px solid var(--dblue);
+    }
+    td, th {
+        text-align:left;
+    }
+    body {
+      background-image: url(https://i.ytimg.com/vi/dDJQ-jqHFm0/maxresdefault.jpg); no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .text-center {
+      text-align: center;
+    }
+</style>
+{% endblock %}
+
 </html>

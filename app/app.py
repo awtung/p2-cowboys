@@ -1,6 +1,6 @@
 #imports
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from social.home.app import social_home_bp
 from database.app import database_bp
 from chat.app import chat_bp
@@ -9,6 +9,7 @@ from MiniLabs.Nathan.app import MiniLabs_Nathan_bp
 from MiniLabs.Dane.app import MiniLabs_Dane_bp
 from MiniLabs.Aiden.app import MiniLabs_Aiden_bp
 from bubblesort.Noahbubble.app import bubblesort_Noahbubble_bp
+from bubblesort.Noahbubble.app import bubblesort_Noahbubblesort_bp
 
 
 app = Flask(__name__)
@@ -19,7 +20,8 @@ app.register_blueprint(MiniLabs_Noah_bp, url_prefix='/MiniLabs/Noah')
 app.register_blueprint(MiniLabs_Nathan_bp, url_prefix='/MiniLabs/Nathan')
 app.register_blueprint(MiniLabs_Dane_bp, url_prefix='/MiniLabs/Dane')
 app.register_blueprint(MiniLabs_Aiden_bp, url_prefix='/MiniLabs/Aiden')
-app.register_blueprint(bubblesort_Noahbubble_bp, url_prefix='/bubblesort/Noahbubble')
+app.register_blueprint(bubblesort_Noahbubble_bp, url_prefix='/bubblesort')
+app.register_blueprint(bubblesort_Noahbubblesort_bp, url_prefix='/Noah_bubble/')
 
 
 @app.route('/')
