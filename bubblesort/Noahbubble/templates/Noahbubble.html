@@ -13,23 +13,27 @@
     <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
         <!-- Title -->
         <div class="col-12" style="text-align: center;">
-            <marquee behavior=alternate width=”202″ scrollamount=”10px″ scrolldelay=”70″ height=”85px″ bgcolor=”#FF00FF”>Noah's Bubble Sort</marquee>
+            <marquee behavior=alternate width=”202″ scrollamount=”10px″ scrolldelay=”70″ height=”85px″ bgcolor=”black”>Noah's Bubble Sort</marquee>
         </div>
 
         <!-- Input and Content -->
         <div>
             <div class="text-center">
-                <h2 style="color: white;">Enter numbers to be sorted:</h2>
                 </br>
                 <form method = "post">
                     <!-- user message input -->
-                    <p><input class="textbox1" name="Noahbubble" required> </p>
+                    <h2 style="color: white;">Enter the minimum value:</h2>
+                    <input name="smallestNum" id="smallestNum" type="number" min="0" max="" style="width: 75px;" >
+                    <h2 style="color: white;">Enter the maximum value:</h2>
+                    <input name="largestNum" id="largestNum" type="number" min="0" max="" style="width: 75px;" >
+                    <h2 style="color: white;">Enter how many values you would like between the min and max values:</h2>
+                    <input name="totalNum" id="totalNum" type="number" min="0" max="" style="width: 75px; margin-bottom: 40px;" >
 
                     <!-- shows buttons, gives them functions -->
                     <p><button class="glow-on-hover"  formaction = "/Noah_bubble/">Sort</button></p>
-                    <p> Your input was: </p>
-                    <p class="output">[{{ numbers }}]</p>
-                    <p>The result is: </p>
+                    <p> Random generated list: </p>
+                    <p class="output">[{{ original }}]</p>
+                    <p>The sorted result is: </p>
                     <p class="output">[{{ display }}]</p>
 
                 </form>
@@ -51,7 +55,7 @@
     }
 
     .glow-on-hover {
-        width: 150px;
+        width: 120px;
         height: 50px;
         border: none;
         outline: none;
