@@ -13,25 +13,25 @@
     <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
         <!-- Title -->
         <div class="col-12" style="text-align: center;">
-            <marquee behavior=alternate width=”202″ scrollamount=”10px″ scrolldelay=”70″ height=”85px″ bgcolor=”#FF00FF”>Factorial Series in Python</marquee>
+            <marquee behavior=alternate width=”202″ scrollamount=”10px″ scrolldelay=”70″ height=”85px″ bgcolor=”#FF00FF”>Noah's Bubble Sort</marquee>
         </div>
 
         <!-- Input and Content -->
         <div>
             <div class="text-center">
-                <h3>Enter numbers to be sorted:</h3>
+                <h2 style="color: white;">Enter numbers to be sorted:</h2>
                 </br>
                 <form method = "post">
                     <!-- user message input -->
                     <p><input class="textbox1" name="Noahbubble" required> </p>
 
                     <!-- shows buttons, gives them functions -->
-                    <p><button class = "button button1" formaction = "/Noah_bubble/">Encrypt</button></p>
-
+                    <p><button class="glow-on-hover"  formaction = "/Noah_bubble/">Sort</button></p>
+                    <p> Your input was: </p>
+                    <p class="output">[{{ numbers }}]</p>
                     <p>The result is: </p>
-
-                    <!-- output -->
                     <p class="output">[{{ display }}]</p>
+
                 </form>
             </div>
         </div>
@@ -39,21 +39,83 @@
 </div>
 
 <style>
-    table, td, th {
-        border: 1px solid var(--dblue);
-    }
-    td, th {
-        text-align:left;
-    }
+    html,
     body {
-      background-image: url(https://i.ytimg.com/vi/dDJQ-jqHFm0/maxresdefault.jpg); no-repeat center center fixed;
+      background-image: url(https://media.istockphoto.com/videos/traveling-on-western-desert-4k-gif-animation-video-id1255866015?s=640x640); no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
+
+
     }
+
+    .glow-on-hover {
+        width: 150px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #111;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+    }
+
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .glow-on-hover:active {
+        color: #000
+    }
+
+    .glow-on-hover:active:after {
+        background: transparent;
+    }
+
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
     .text-center {
       text-align: center;
+    }
+    p {
+    color: white;
+    font-size: 25px;
     }
 </style>
 {% endblock %}
