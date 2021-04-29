@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aiden's Bubble Sort</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+{% extends "home.html" %}]
+
+{% block content %}
+<div class="container">
+
+    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+        <!-- Title -->
+        <div class="col-12" style="text-align: center;">
+            <marquee behavior=alternate width=”202″ scrollamount=”10px″ scrolldelay=”70″ height=”85px″ bgcolor=”#FF00FF”>Bubble Sort</marquee>
+        </div>
+
+        <!-- Input and Content -->
+        <div>
+            <div class="text-center">
+                <h3>Enter numbers to be sorted:</h3>
+                </br>
+                <form method = "post">
+                    <!-- user message input -->
+                    <p><input class="textbox1" name="Aidenbubble" required> </p>
+
+                    <!-- shows buttons, gives them functions -->
+                    <p><button class = "button button1" formaction = "/Aiden_bubble/">Sort</button></p>
+
+                    <p>The result is: </p>
+
+                    <!-- output -->
+                    <p class="output">[{{ display }}]</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    table, td, th {
+        border: 1px solid var(--dblue);
+    }
+    td, th {
+        text-align:left;
+    }
+    body {
+      background-image: url(https://i.ytimg.com/vi/dDJQ-jqHFm0/maxresdefault.jpg); no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .text-center {
+      text-align: center;
+    }
+</style>
+{% endblock %}
+
+</html>

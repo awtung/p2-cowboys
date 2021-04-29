@@ -10,6 +10,8 @@ from MiniLabs.Dane.app import MiniLabs_Dane_bp
 from MiniLabs.Aiden.app import MiniLabs_Aiden_bp
 from bubblesort.Noahbubble.app import bubblesort_Noahbubble_bp
 from bubblesort.Noahbubble.app import bubblesort_Noahbubblesort_bp
+from bubblesort.Aidenbubble.app import bubblesort_Aidenbubble_bp
+from bubblesort.Aidenbubble.app import bubblesort_Aidenbubblesort_bp
 
 app = Flask(__name__)
 app.register_blueprint(social_home_bp, url_prefix='/aboutus')
@@ -21,6 +23,8 @@ app.register_blueprint(MiniLabs_Dane_bp, url_prefix='/MiniLabs/Dane')
 app.register_blueprint(MiniLabs_Aiden_bp, url_prefix='/MiniLabs/Aiden')
 app.register_blueprint(bubblesort_Noahbubble_bp, url_prefix='/bubblesort')
 app.register_blueprint(bubblesort_Noahbubblesort_bp, url_prefix='/Noah_bubble/')
+app.register_blueprint(bubblesort_Aidenbubble_bp, url_prefix='/bubblesort')
+app.register_blueprint(bubblesort_Aidenbubblesort_bp, url_prefix='/Aiden_bubble/')
 
 
 @app.route('/')
