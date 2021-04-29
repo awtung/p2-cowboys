@@ -17,6 +17,6 @@ def Noahbubblesort():
         userinput = form["Noahbubble"]
         nums = list(map(int, userinput.split()))
         nums.sort()
-        bubblesort = nums.sort()
+        bubblesort = ", ".join(str(v) for v in nums)
         return render_template("Noahbubble.html", display=bubblesort)
     return redirect("/bubblesort/Noahbubble")
