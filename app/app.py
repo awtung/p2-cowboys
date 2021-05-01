@@ -1,4 +1,4 @@
-#imports
+# imports
 
 from flask import Flask, render_template
 from social.home.app import social_home_bp
@@ -8,7 +8,7 @@ from MiniLabs.Noah.app import MiniLabs_Noah_bp
 from MiniLabs.Nathan.app import MiniLabs_Nathan_bp
 from MiniLabs.Dane.app import MiniLabs_Dane_bp
 from MiniLabs.Aiden.app import MiniLabs_Aiden_bp
-from bubblesort.Noahbubble.app import bubblesort_Noahbubble_bp
+from bubblesort.Nathanbubble.app import bubblesort_Nathanbubblesort_bp
 from bubblesort.Noahbubble.app import bubblesort_Noahbubblesort_bp
 from bubblesort.Aidenbubble.app import bubblesort_Aidenbubble_bp
 from bubblesort.Aidenbubble.app import bubblesort_Aidenbubblesort_bp
@@ -21,7 +21,7 @@ app.register_blueprint(MiniLabs_Noah_bp, url_prefix='/MiniLabs/Noah')
 app.register_blueprint(MiniLabs_Nathan_bp, url_prefix='/MiniLabs/Nathan')
 app.register_blueprint(MiniLabs_Dane_bp, url_prefix='/MiniLabs/Dane')
 app.register_blueprint(MiniLabs_Aiden_bp, url_prefix='/MiniLabs/Aiden')
-app.register_blueprint(bubblesort_Noahbubble_bp, url_prefix='/bubblesort')
+app.register_blueprint(bubblesort_Nathanbubblesort_bp, url_prefix='/Nathan_bubble/')
 app.register_blueprint(bubblesort_Noahbubblesort_bp, url_prefix='/Noah_bubble/')
 app.register_blueprint(bubblesort_Aidenbubble_bp, url_prefix='/bubblesort')
 app.register_blueprint(bubblesort_Aidenbubblesort_bp, url_prefix='/Aiden_bubble/')
@@ -60,6 +60,5 @@ def quote():
 
 #run file
 if __name__ == "__main__":
-     app.run(debug=True, port='5000', host='127.0.0.1')
-    # app.run(debug=True, port='8080', host='192.168.1.5')
-
+    app.run(debug=True, port='5000', host='127.0.0.1')
+# app.run(debug=True, port='8080', host='192.168.1.5')
