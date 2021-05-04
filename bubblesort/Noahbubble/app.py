@@ -13,14 +13,13 @@ def Noahbubble():
 
 @bubblesort_Noahbubblesort_bp.route("/", methods=["GET", "POST"])
 def Noahbubblesort():
+    global sort
     if request.method == 'POST':
         form = request.form
+        array = []
         smallestNum = int(form["smallestNum"])
         largestNum = int(form["largestNum"])
         # Check to make sure user input parameters are valid
-        while smallestNum >= largestNum:
-            print("Invalid number entered. Largest number must be greater than smallest number.")
-            largestNum = int(input("Enter largest number: "))
         totalNum = int(form["totalNum"])
         # Generate random array based on user input
         array = np.random.randint(smallestNum, largestNum, totalNum)
@@ -33,8 +32,8 @@ def Noahbubblesort():
                 # than the next array
                 if array[j] > array[j+1]:
                     array[j], array[j+1] = array[j+1], array[j]
+                    bubble = print(array)
+                    sort = bubble
         bubblesort = ", ".join(str(v) for v in array)
-    # Driver code to test above
-    #bubbleSort()
-        return render_template("Noahbubble.html", display=bubblesort, original=original)
+        return render_template("Noahbubble.html", display=bubblesort, original=original, sort=sort)
     return redirect("/bubblesort/Noahbubble")
