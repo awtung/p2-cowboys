@@ -5,7 +5,7 @@
     <title>Noah's Mini Lab</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
-{% extends "home.html" %}]
+{% extends "home.html" %}
 
 {% block content %}
 <div class="container">
@@ -33,6 +33,8 @@
                     <p><button class="glow-on-hover"  formaction = "/Noah_bubble/">Sort</button></p>
                     <p> Random generated list: </p>
                     <p class="output">[{{ original }}]</p>
+                    <p> Sorting Process: </p>
+                    <p class="output">[{{ sort }}]</p>
                     <p>The sorted result is: </p>
                     <p class="output">[{{ display }}]</p>
 
