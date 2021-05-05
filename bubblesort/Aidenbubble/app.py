@@ -15,11 +15,11 @@ def Aidenbubble():
 
 @bubblesort_Aidenbubblesort_bp.route("/", methods=["GET", "POST"])
 def Aidenbubblesort():
-        if request.method == 'POST':
-            form = request.form
-            smallestNum = int(form["smallestNum"])
-            largestNum = int(form["largestNum"])
-            totalNum = int(form["totalNum"])
-            # Check to make sure user input parameters are valid
-            return render_template("Aidenbubble.html", bubble=Bubble(smallestNum, largestNum, totalNum))
-        return redirect("/bubblesort/Aidenbubble")
+    if request.method == 'POST':
+        form = request.form
+        smallestNum = int(form["smallestNum"])
+        largestNum = int(form["largestNum"])
+        totalNum = int(form["totalNum"])
+        # Check to make sure user input parameters are valid
+        return render_template("Aidenbubble.html", bub=Bubble(smallestNum, largestNum, totalNum))
+    return render_template("Aidenbubble.html", bub=Bubble(1, 50, 30))

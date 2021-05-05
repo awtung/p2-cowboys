@@ -5,7 +5,7 @@
     <title>Aiden's Mini Lab</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
-{% extends "home.html" %}]
+{% extends "home.html" %}
 
 {% block content %}
 <div class="container">
@@ -32,11 +32,11 @@
                     <!-- shows buttons, gives them functions -->
                     <p><button class="button"  formaction = "/Aiden_bubble/">Sort</button></p>
                     <p> Random generated list: </p>
-                    <p class="output">[{{ bubble.original }}]</p>
+                    <p class="output">{{ bub.original }}</p>
                     <p>The sorted result is: </p>
-                    <p class="output">[{{ bubble.bubblesort }}]</p>
+                    <p class="output">{{ bub.bubblesort }}</p>
                     <p>The log result is: </p>
-                    <p class="output">[{{ bubble.log }}]</p>
+                    <p class="output">{{ bub.log }}</p>
 
                 </form>
             </div>
