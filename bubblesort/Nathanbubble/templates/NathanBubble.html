@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Aiden's Mini Lab</title>
+    <title>Nathan's Mini Lab</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
-{% extends "home.html" %}
+{% extends "home.html" %}]
 
 {% block content %}
 <div class="container">
@@ -13,7 +13,7 @@
     <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
         <!-- Title -->
         <div class="col-12" style="text-align: center;">
-            <marquee behavior=alternate width=”202″ scrollamount=”10px″ scrolldelay=”70″ height=”85px″ bgcolor=”black”>Aiden's Bubble Sort</marquee>
+            <marquee behavior=alternate width=”202″ scrollamount=”10px″ scrolldelay=”70″ height=”85px″ bgcolor=”black”>Nathan's Bubble Sort</marquee>
         </div>
 
         <!-- Input and Content -->
@@ -30,13 +30,11 @@
                     <input name="totalNum" id="totalNum" type="number" min="0" max="" style="width: 75px; margin-bottom: 40px;" >
 
                     <!-- shows buttons, gives them functions -->
-                    <p><button class="button"  formaction = "/Aiden_bubble/">Sort</button></p>
+                    <p><button class="button"  formaction = "/Nathan_bubble/">Sort</button></p>
                     <p> Random generated list: </p>
-                    <p class="output">{{ bub.original }}</p>
+                    <p class="output">[{{ original }}]</p>
                     <p>The sorted result is: </p>
-                    <p class="output">{{ bub.bubblesort }}</p>
-                    <p>The log result is: </p>
-                    <p class="output">{{ bub.log }}</p>
+                    <p class="output">[{{ display }}]</p>
 
                 </form>
             </div>
@@ -47,7 +45,7 @@
 <style>
     html,
     body {
-      background-image: url(https://cdna.artstation.com/p/assets/images/images/021/685/110/large/creepy-cat-screenshot-03.jpg?1572566091); no-repeat center center fixed;
+      background-image: url(https://c4.wallpaperflare.com/wallpaper/559/691/625/landscape-abstract-red-mountains-wallpaper-preview.jpg); no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
