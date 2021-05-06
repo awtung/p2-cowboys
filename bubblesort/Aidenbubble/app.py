@@ -1,25 +1,26 @@
 from flask import Flask, Blueprint, render_template, request, redirect
-from bubblesort.Aidenbubble.bubble import Bubble
-
-
-bubblesort_Aidenbubble_bp = Blueprint('Aidenbubble', __name__,
-                                     template_folder='templates',
-                                     static_folder='static', static_url_path='assets')
+from bubblesort.Aidenbubble.Aidenbubble import BubbleSort
+from bubblesort.Aidenbubble.Aidenwords import alphabetize
+from bubblesort.Aidenbubble.Aidennums import order
 bubblesort_Aidenbubblesort_bp = Blueprint('Aidenbubblesort', __name__,
                                          template_folder='templates',
                                          static_folder='static', static_url_path='assets')
+bubblesort_Aidensort_bp = Blueprint('Aidensort', __name__,
+                                   template_folder='templates',
+                                   static_folder='static', static_url_path='assets')
 
-@bubblesort_Aidenbubble_bp.route('/Aidenbubble')
-def Aidenbubble():
-    return render_template("Aidenbubble.html")
-
-@bubblesort_Aidenbubblesort_bp.route("/", methods=["GET", "POST"])
+@bubblesort_Aidenbubblesort_bp.route('/Aiden_bubble', methods=["GET", "POST"])
 def Aidenbubblesort():
     if request.method == 'POST':
         form = request.form
         smallestNum = int(form["smallestNum"])
         largestNum = int(form["largestNum"])
         totalNum = int(form["totalNum"])
-        # Check to make sure user input parameters are valid
-        return render_template("Aidenbubble.html", bub=Bubble(smallestNum, largestNum, totalNum))
-    return render_template("Aidenbubble.html", bub=Bubble(1, 50, 30))
+        return render_template("Aidenbubble.html", bubblesort=BubbleSort(smallestNum, largestNum, totalNum))
+    return render_template("Aidenbubble.html", bubblesort=BubbleSort(0, 10, 5))
+
+@bubblesort_Aidensort_bp.route('/Noah_sort', methods=["GET", "POST"])
+def Aidensort():
+    if request.method == 'POST':
+        form = request.form
+        return render_template("Aidenbubble.html", word=alphabetize(form["words"]), num=order(form["nums"]))

@@ -8,44 +8,64 @@
 {% extends "home.html" %}
 
 {% block content %}
-<div class="container">
 
-    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
-        <!-- Title -->
-        <div class="col-12" style="text-align: center;">
-            <marquee behavior=alternate width=”202″ scrollamount=”10px″ scrolldelay=”70″ height=”85px″ bgcolor=”black”>Aiden's Bubble Sort</marquee>
-        </div>
+<div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+    <!-- Title -->
+    <div class="col-12" style="text-align: center;">
+        <marquee behavior=alternate width=”202″ scrollamount=”10px″ scrolldelay=”70″ height=”85px″ bgcolor=”black”>Aiden's Bubble Sort</marquee>
+    </div>
 
-        <!-- Input and Content -->
+    <!-- Input and Content -->
+    <div>
         <div>
+            </br>
             <div class="text-center">
-                </br>
                 <form method = "post">
-                    <!-- user message input -->
-                    <h2 style="color: black;">Enter the minimum value:</h2>
-                    <input name="smallestNum" id="smallestNum" type="number" min="0" max="" style="width: 75px;" >
-                    <h2 style="color: black;">Enter the maximum value:</h2>
-                    <input name="largestNum" id="largestNum" type="number" min="0" max="" style="width: 75px;" >
-                    <h2 style="color: black;">Enter how many values you would like between the min and max values:</h2>
-                    <input name="totalNum" id="totalNum" type="number" min="0" max="" style="width: 75px; margin-bottom: 40px;" >
+                    <p style="text-align: center; font-size: 40px;"><button class="button" formaction="/bubblesort/Aidenbubble/Aiden_bubble">Sort</button></p>
+                    <div class="column">
+                        <h1 style="color:black">Random Generated Number List</h1>
+                        <!-- user message input -->
+                        <h2>Enter the minimum value:</h2>
+                        <input name="smallestNum" id="smallestNum" type="number" min="0" max="" style="width: 75px;" >
+                        <h2>Enter the maximum value:</h2>
+                        <input name="largestNum" id="largestNum" type="number" min="0" max="" style="width: 75px;" >
+                        <h2>Enter how many values you would like between the min and max values:</h2>
+                        <input name="totalNum" id="totalNum" type="number" min="0" max="" style="width: 75px; margin-bottom: 40px;" >
 
-                    <!-- shows buttons, gives them functions -->
-                    <p><button class="button"  formaction = "/Aiden_bubble/">Sort</button></p>
-                    <p> Random generated list: </p>
-                    <p class="output">{{ bub.original }}</p>
-                    <p>The sorted result is: </p>
-                    <p class="output">{{ bub.bubblesort }}</p>
-                    <p>The log result is: </p>
-                    <p class="output">{{ bub.log }}</p>
+                        <!-- shows buttons, gives them functions -->
+
+                        <p style="color:black"> Random generated list: </p>
+                        <p class="output">{{bubblesort.original}}</p>
+                        <p style="color:black">The sorted result is: </p>
+                        <p class="output">{{bubblesort.bubblesort}}</p>
+                        <p style="color:black"> Sorting Process: </p>
+                        <div class="overflow-auto" style="height: 350px">
+                            <p class="output">{{bubblesort.log}}</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h1 style="color:black">User Inputted List</h1>
+                        <h2>Enter a word for  the characters to be sorted alphabetically</h2>
+                        <input name="words" id="words" type="text" min="0" max="" style="width: 75px;" >
+                        <h2>Enter a list of numbers to be bubble sorted (use commas)</h2>
+                        <input name="nums" id="nums" type="text" min="0" max="" style="width: 75px; margin-bottom: 40px;" >
+
+                        <!-- shows buttons, gives them functions -->
+                        <p style="color:black"> The sorted result of words: </p>
+                        <p class="output">{{word}}</p>
+                        <p style="color:black">The sorted result of numbers: </p>
+                        <p class="output">{{num}}</p>
+                    </div>
 
                 </form>
             </div>
         </div>
     </div>
-</div>
 
-<style>
-    html,
+
+
+    <style>
+html,
     body {
       background-image: url(https://cdna.artstation.com/p/assets/images/images/021/685/110/large/creepy-cat-screenshot-03.jpg?1572566091); no-repeat center center fixed;
       -webkit-background-size: cover;
@@ -100,7 +120,25 @@
     }
 
     .text-center {
-      text-align: center;
+          text-align: center;
+        }
+    .text-left {
+      text-align: left;
+    }
+    .text-right {
+      text-align: right;
+    }
+    .column {
+      float: left;
+      width: 50%;
+    }
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    h2 {
+    color: black;
     }
     p {
     color: black;
