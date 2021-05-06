@@ -11,7 +11,7 @@ class BubbleSort:
         array = np.random.randint(smallestNum, largestNum, totalNum)
         self._original = ", ".join(str(v) for v in array)
         # Traverse through all array arrays
-        self._log = [array]
+        self._log = []
         for i in range(totalNum - 1):
             # Traverse the array from 0 to n-i-1
             for j in range(0, totalNum - i - 1):
@@ -19,7 +19,7 @@ class BubbleSort:
                 # than the next array
                 if array[j] > array[j + 1]:
                     array[j], array[j + 1] = array[j + 1], array[j]
-                    self._log.append(array)
+                    self._log.append(str(array))
         self._bubblesort = ", ".join(str(v) for v in array)
 
     @property

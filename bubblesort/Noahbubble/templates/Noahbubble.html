@@ -9,66 +9,62 @@
 
 {% block content %}
 
-    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
-        <!-- Title -->
-        <div class="col-12" style="text-align: center;">
-            <marquee behavior=alternate width=”202″ scrollamount=”10px″ scrolldelay=”70″ height=”85px″ bgcolor=”black”>Noah's Bubble Sort</marquee>
-        </div>
+<div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+    <!-- Title -->
+    <div class="col-12" style="text-align: center;">
+        <marquee behavior=alternate width=”202″ scrollamount=”10px″ scrolldelay=”70″ height=”85px″ bgcolor=”black”>Noah's Bubble Sort</marquee>
+    </div>
 
-        <!-- Input and Content -->
+    <!-- Input and Content -->
+    <div>
         <div>
-            <div class="column">
-                </br>
-                <div class="text-center">
-                    <h1 style="color:limegreen;">Random Generated List of Numbers:</h1>
-                <form method = "post">
-                    <!-- user message input -->
-                    <h2 style="color: white;">Enter the minimum value:</h2>
-                    <input name="smallestNum" id="smallestNum" type="number" min="0" max="" style="width: 75px;" >
-                    <h2 style="color: white;">Enter the maximum value:</h2>
-                    <input name="largestNum" id="largestNum" type="number" min="0" max="" style="width: 75px;" >
-                    <h2 style="color: white;">Enter how many values you would like between the min and max values:</h2>
-                    <input name="totalNum" id="totalNum" type="number" min="0" max="" style="width: 75px; margin-bottom: 40px;" >
-
-                    <!-- shows buttons, gives them functions -->
-                    <p><button class="glow-on-hover" onclick="Noahbubblesort()">Sort</button></p>
-                    <p> Random generated list: </p>
-                    <p class="output">{{bubblesort.original}}</p>
-                    <p>The sorted result is: </p>
-                    <p class="output">{{bubblesort.bubblesort}}</p>
-                    <div class="overflow-auto" style="height: 350px">
-                        <p> Sorting Process: </p>
-                        <p class="output">{{bubblesort.log}}</p>
-                    </div>
-                </form>
-                </div>
-            </div>
-        </div>
-        <div class="column">
             </br>
             <div class="text-center">
-                <h1 style="color:limegreen;">User Inputted Lists:</h1>
-            <form method = "post">
-                <!-- user message input -->
-                <h2 style="color: white;">Enter a list of words to be sorted by length</h2>
-                <input name="words" id="words" type="text" min="0" max="" style="width: 75px;" >
-                <h2 style="color: white;">Enter a list of numbers to be bubble sorted</h2>
-                <input name="nums" id="nums" type="text" min="0" max="" style="width: 75px; margin-bottom: 40px;" >
+                <form method = "post">
+                    <p style="text-align: center; font-size: 40px;"><button class="glow-on-hover" formaction="/bubblesort/Noahbubble/Noah_bubble">Sort</button></p>
+                    <div class="column">
+                        <h1 style="color:black">Random Generated Number List</h1>
+                        <!-- user message input -->
+                        <h2>Enter the minimum value:</h2>
+                        <input name="smallestNum" id="smallestNum" type="number" min="0" max="" style="width: 75px;" >
+                        <h2>Enter the maximum value:</h2>
+                        <input name="largestNum" id="largestNum" type="number" min="0" max="" style="width: 75px;" >
+                        <h2>Enter how many values you would like between the min and max values:</h2>
+                        <input name="totalNum" id="totalNum" type="number" min="0" max="" style="width: 75px; margin-bottom: 40px;" >
 
-                <!-- shows buttons, gives them functions -->
-                <p><button class="glow-on-hover" onclick="Noahsort()">Sort</button></p>
-                <p> The sorted result of words: </p>
-                <p class="output">{{word}}</p>
-                <p>The sorted result of numbers: </p>
-                <p class="output">{{num}}</p>
+                        <!-- shows buttons, gives them functions -->
 
-            </form>
+                        <p style="color:skyblue"> Random generated list: </p>
+                        <p class="output">{{bubblesort.original}}</p>
+                        <p style="color:skyblue">The sorted result is: </p>
+                        <p class="output">{{bubblesort.bubblesort}}</p>
+                        <p style="color:skyblue"> Sorting Process: </p>
+                        <div class="overflow-auto" style="height: 350px">
+                            <p class="output">{{bubblesort.log}}</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h1 style="color:black">User Inputted List</h1>
+                        <h2>Enter a word for characters to be sorted alphabetically</h2>
+                        <input name="words" id="words" type="text" min="0" max="" style="width: 75px;" >
+                        <h2>Enter a list of numbers to be bubble sorted</h2>
+                        <input name="nums" id="nums" type="text" min="0" max="" style="width: 75px; margin-bottom: 40px;" >
+
+                        <!-- shows buttons, gives them functions -->
+                        <p style="color:skyblue"> The sorted result of words: </p>
+                        <p class="output">{{word}}</p>
+                        <p style="color:skyblue">The sorted result of numbers: </p>
+                        <p class="output">{{num}}</p>
+                    </div>
+
+                </form>
             </div>
         </div>
     </div>
 
 
-<style>
+
+    <style>
     html,
     body {
       background-image: url(https://media.istockphoto.com/videos/traveling-on-western-desert-4k-gif-animation-video-id1255866015?s=640x640); no-repeat center center fixed;
@@ -81,8 +77,8 @@
     }
 
     .glow-on-hover {
-        width: 120px;
-        height: 50px;
+        width: 230px;
+        height: 70px;
         border: none;
         outline: none;
         color: #fff;
@@ -157,11 +153,14 @@
     display: table;
     clear: both;
     }
+    h2 {
+    color: red;
+    }
     p {
     color: white;
     font-size: 25px;
     }
 </style>
-{% endblock %}
+    {% endblock %}
 
 </html>
