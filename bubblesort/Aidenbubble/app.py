@@ -23,7 +23,7 @@ def Aidenbubblesort():
 def Aidensort():
     if request.method == 'POST':
         form = request.form
-        return render_template("Aidenbubble.html", word=alphabetize(form["words"]), num=order(form["nums"]))
+        return render_template("Aidenbubble.html", words=alphabetize(form["words"]), nums=order(form["nums"]))
 
 
 
