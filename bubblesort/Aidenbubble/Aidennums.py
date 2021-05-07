@@ -17,3 +17,6 @@ def order(word):
     while change_count > 0:
         list, change_count = switch(list)
     return (list)
+
+
+
