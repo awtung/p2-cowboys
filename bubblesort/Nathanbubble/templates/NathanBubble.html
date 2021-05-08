@@ -2,50 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nathan's Mini Lab</title>
+    <title>Aiden's Mini Lab</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
-{% extends "home.html" %}]
+{% extends "home.html" %}
 
 {% block content %}
-<div class="container">
 
-    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
-        <!-- Title -->
-        <div class="col-12" style="text-align: center;">
-            <marquee behavior=alternate width=”202″ scrollamount=”10px″ scrolldelay=”70″ height=”85px″ bgcolor=”black”>Nathan's Bubble Sort</marquee>
-        </div>
+<div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+    <!-- Title -->
+    <div class="col-12" style="text-align: center;">
+        <marquee behavior=alternate width=”202″ scrollamount=”10px″ scrolldelay=”70″ height=”85px″ bgcolor=”black”>Nathan's Bubble Sort</marquee>
+    </div>
 
-        <!-- Input and Content -->
+    <!-- Input and Content -->
+
+    <div>
         <div>
+            </br>
             <div class="text-center">
-                </br>
                 <form method = "post">
-                    <!-- user message input -->
-                    <h2 style="color: black;">Enter the minimum value:</h2>
-                    <input name="smallestNum" id="smallestNum" type="number" min="0" max="" style="width: 75px;" >
-                    <h2 style="color: black;">Enter the maximum value:</h2>
-                    <input name="largestNum" id="largestNum" type="number" min="0" max="" style="width: 75px;" >
-                    <h2 style="color: black;">Enter how many values you would like between the min and max values:</h2>
-                    <input name="totalNum" id="totalNum" type="number" min="0" max="" style="width: 75px; margin-bottom: 40px;" >
+                        <h1 style="color:white">Random Generated Number List</h1>
+                        <!-- user message input -->
+                        <h2>Enter the minimum value:</h2>
+                        <input name="smallestNum" id="smallestNum" type="number" min="0" max="" style="width: 75px;" >
+                        <h2>Enter the maximum value:</h2>
+                        <input name="largestNum" id="largestNum" type="number" min="0" max="" style="width: 75px;" >
+                        <h2>Enter how many values you would like between the min and max values:</h2>
+                        <input name="totalNum" id="totalNum" type="number" min="0" max="" style="width: 75px; margin-bottom: 40px;" >
 
-                    <!-- shows buttons, gives them functions -->
-                    <p><button class="button"  formaction = "/Nathan_bubble/">Sort</button></p>
-                    <p> Random generated list: </p>
-                    <p class="output">[{{ original }}]</p>
-                    <p>The sorted result is: </p>
-                    <p class="output">[{{ display }}]</p>
-
+                        <!-- shows buttons, gives them functions -->
+                        <p style="text-align: center; font-size: 40px;"><button class="button" formaction="/bubblesort/Nathanbubble/Nathan_bubble">Sort</button></p>
+                        <p style="color:white"> Random generated list: </p>
+                        <p class="output">{{bubblesort.original}}</p>
+                        <p style="color:white">The sorted result is: </p>
+                        <p class="output">{{bubblesort.bubblesort}}</p>
+                        <p style="color:white"> Sorting Process: </p>
+                        <div class="overflow-auto" style="height: 350px">
+                            <p class="output">{{bubblesort.log}}</p>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
-</div>
 
-<style>
-    html,
+
+
+    <style>
+html,
     body {
-      background-image: url(https://c4.wallpaperflare.com/wallpaper/559/691/625/landscape-abstract-red-mountains-wallpaper-preview.jpg); no-repeat center center fixed;
+      background-image: url(https://wallup.net/wp-content/uploads/2016/03/12/301719-Cowboy_Bebop-748x406.png); no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -98,12 +105,30 @@
     }
 
     .text-center {
-      text-align: center;
+          text-align: center;
+        }
+    .text-left {
+      text-align: left;
+    }
+    .text-right {
+      text-align: right;
+    }
+    .column {
+      float: left;
+      width: 50%;
+    }
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    h2 {
+    color: white;
     }
     p {
-    color: black;
+    color: white;
     font-size: 25px;
     }
 </style>
-{% endblock %}
+    {% endblock %}
 
