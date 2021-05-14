@@ -12,6 +12,7 @@ from bubblesort.Noahbubble.app import bubblesort_Noahbubblesort_bp
 from bubblesort.Aidenbubble.app import bubblesort_Aidenbubblesort_bp
 from bubblesort.Nathanbubble.app import bubblesort_Nathanbubblesort_bp
 from bubblesort.Danebubble.app import bubblesort_Danebubblesort_bp
+from saloon.app import saloon_saloon_bp
 
 app = Flask(__name__)
 app.register_blueprint(social_home_bp, url_prefix='/aboutus')
@@ -25,6 +26,7 @@ app.register_blueprint(bubblesort_Noahbubblesort_bp, url_prefix='/bubblesort/Noa
 app.register_blueprint(bubblesort_Aidenbubblesort_bp, url_prefix='/bubblesort/Aidenbubble')
 app.register_blueprint(bubblesort_Nathanbubblesort_bp, url_prefix='/bubblesort/Nathanbubble')
 app.register_blueprint(bubblesort_Danebubblesort_bp, url_prefix='/Dane_bubble/')
+app.register_blueprint(saloon_saloon_bp, url_prefix='/saloon')
 
 
 @app.route('/')
