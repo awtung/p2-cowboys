@@ -2,6 +2,7 @@
 
 from flask import Flask, render_template
 from social.home.app import social_home_bp
+from History.app import History_history_bp
 from database.app import database_bp
 from chat.app import chat_bp
 from MiniLabs.Noah.app import MiniLabs_Noah_bp
@@ -16,6 +17,7 @@ from saloon.app import saloon_saloon_bp
 
 app = Flask(__name__)
 app.register_blueprint(social_home_bp, url_prefix='/aboutus')
+app.register_blueprint(History_history_bp, url_prefix='/history')
 app.register_blueprint(database_bp, url_prefix='/database')
 app.register_blueprint(chat_bp, url_prefix='/chat')
 app.register_blueprint(MiniLabs_Noah_bp, url_prefix='/MiniLabs/Noah')

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    {% extends "home.html" %}
+
+    {% block content %}
+    <style>
+  body{
+    background-image: url(https://image.freepik.com/free-vector/desert-landscape-background-video-conferencing_23-2148647356.jpg);
+    margin-top:20px;
+}
+.hori-timeline .events {
+    border-top: 3px solid #e9ecef;
+}
+.hori-timeline .events .event-list {
+    display: block;
+    position: relative;
+    text-align: center;
+    padding-top: 70px;
+    margin-right: 0;
+}
+.hori-timeline .events .event-list:before {
+    content: "";
+    position: absolute;
+    height: 36px;
+    border-right: 2px dashed #dee2e6;
+    top: 0;
+}
+.hori-timeline .events .event-list .event-date {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    right: 0;
+    width: 75px;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+@media (min-width: 1140px) {
+    .hori-timeline .events .event-list {
+        display: inline-block;
+        width: 24%;
+        padding-top: 45px;
+    }
+    .hori-timeline .events .event-list .event-date {
+        top: -12px;
+    }
+}
+.bg-soft-primary {
+    background-color: rgba(64,144,203,.3)!important;
+}
+.bg-soft-success {
+    background-color: rgba(71,189,154,.3)!important;
+}
+.bg-soft-danger {
+    background-color: rgba(231,76,94,.3)!important;
+}
+.bg-soft-warning {
+    background-color: rgba(249,213,112,.3)!important;
+}
+.card {
+    border: none;
+    margin-bottom: 24px;
+    -webkit-box-shadow: 0 0 13px 0 rgba(236,236,241,.44);
+    box-shadow: 0 0 13px 0 rgba(236,236,241,.44);
+}
+
+
+
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title mb-5">The History of the Wild West</h4>
+
+                    <div class="hori-timeline" dir="ltr">
+                        <ul class="list-inline events">
+                            <li class="list-inline-item event-list">
+                                <div class="px-4">
+                                    <div class="event-date bg-soft-primary text-primary">Date</div>
+                                    <h5 class="font-size-16">Event One</h5>
+                                    <p class="text-muted">Wild West Info</p>
+                                    <div>
+                                        <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item event-list">
+                                <div class="px-4">
+                                    <div class="event-date bg-soft-success text-success">Date</div>
+                                    <h5 class="font-size-16">Event Two</h5>
+                                    <p class="text-muted">Wild West Info</p>
+                                    <div>
+                                        <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item event-list">
+                                <div class="px-4">
+                                    <div class="event-date bg-soft-danger text-danger">Date</div>
+                                    <h5 class="font-size-16">Event Three</h5>
+                                    <p class="text-muted">Wild West Info</p>
+                                    <div>
+                                        <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item event-list">
+                                <div class="px-4">
+                                    <div class="event-date bg-soft-warning text-warning">Date</div>
+                                    <h5 class="font-size-16">Event Four</h5>
+                                    <p class="text-muted">Wild West Info</p>
+                                    <div>
+                                        <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

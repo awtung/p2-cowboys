@@ -24,3 +24,7 @@ def Dane():
 @social_home_bp.route('/NoahPidding')
 def Noah():
     return render_template("Noah.html")
+
+@social_home_bp.route('/history')
+def history():
+    return render_template("history.html")
