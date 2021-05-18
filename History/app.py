@@ -6,3 +6,4 @@ History_history_bp = Blueprint('History', __name__,
 @History_history_bp.route('/')
 def history():
     return render_template("history.html")
+

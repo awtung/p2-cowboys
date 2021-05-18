@@ -6,64 +6,131 @@
 
     {% block content %}
     <style>
-  body{
-    background-image: url(https://image.freepik.com/free-vector/desert-landscape-background-video-conferencing_23-2148647356.jpg);
-    margin-top:20px;
+
+   body {
+background-image: url(https://cdn.wallpapersafari.com/79/29/Aou7Y0.jpg); no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
-.hori-timeline .events {
-    border-top: 3px solid #e9ecef;
-}
-.hori-timeline .events .event-list {
-    display: block;
+
+
+
+
+.timeline {
+    border-left: 3px solid #727cf5;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    background: rgba(114, 124, 245, 0.09);
+    margin: 0 auto;
+    letter-spacing: 0.2px;
     position: relative;
-    text-align: center;
-    padding-top: 70px;
-    margin-right: 0;
+    line-height: 1.4em;
+    font-size: 1.03em;
+    padding: 50px;
+    list-style: none;
+    text-align: left;
+    max-width: 40%;
 }
-.hori-timeline .events .event-list:before {
-    content: "";
+
+@media (max-width: 767px) {
+    .timeline {
+        max-width: 98%;
+        padding: 25px;
+    }
+}
+
+.timeline h1 {
+    font-weight: 300;
+    font-size: 1.4em;
+}
+
+.timeline h2,
+.timeline h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.timeline .event {
+    border-bottom: 1px dashed #e8ebf1;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .timeline .event {
+        padding-top: 30px;
+    }
+}
+
+.timeline .event:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+}
+
+.timeline .event:before,
+.timeline .event:after {
     position: absolute;
-    height: 36px;
-    border-right: 2px dashed #dee2e6;
+    display: block;
     top: 0;
 }
-.hori-timeline .events .event-list .event-date {
-    position: absolute;
-    top: 38px;
+
+.timeline .event:before {
+    left: 500px;
+    content: attr(data-date);
+    text-align: right;
+    font-weight: 100;
+    font-size: 0.9em;
+    min-width: 120px;
+}
+
+@media (max-width: 767px) {
+    .timeline .event:before {
+        left: 0px;
+        text-align: left;
+    }
+}
+
+.timeline .event:after {
+    -webkit-box-shadow: 0 0 0 3px #727cf5;
+    box-shadow: 0 0 0 3px #727cf5;
+    left: -55.8px;
+    background: #fff;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    content: "";
+    top: 5px;
+}
+
+@media (max-width: 767px) {
+    .timeline .event:after {
+        left: -31.8px;
+    }
+}
+
+.rtl .timeline {
+    border-left: 0;
+    text-align: right;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-right: 3px solid #727cf5;
+}
+
+.rtl .timeline .event::before {
     left: 0;
-    right: 0;
-    width: 75px;
-    margin: 0 auto;
-    border-radius: 4px;
-    padding: 2px 4px;
+    right: -170px;
 }
-@media (min-width: 1140px) {
-    .hori-timeline .events .event-list {
-        display: inline-block;
-        width: 24%;
-        padding-top: 45px;
-    }
-    .hori-timeline .events .event-list .event-date {
-        top: -12px;
-    }
-}
-.bg-soft-primary {
-    background-color: rgba(64,144,203,.3)!important;
-}
-.bg-soft-success {
-    background-color: rgba(71,189,154,.3)!important;
-}
-.bg-soft-danger {
-    background-color: rgba(231,76,94,.3)!important;
-}
-.bg-soft-warning {
-    background-color: rgba(249,213,112,.3)!important;
-}
-.card {
-    border: none;
-    margin-bottom: 24px;
-    -webkit-box-shadow: 0 0 13px 0 rgba(236,236,241,.44);
-    box-shadow: 0 0 13px 0 rgba(236,236,241,.44);
+
+.rtl .timeline .event::after {
+    left: 0;
+    right: -55.8px;
 }
 
 
@@ -72,62 +139,47 @@
 </head>
 <body>
 
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title mb-5">The History of the Wild West</h4>
+                    <h6 class="card-title">Wild West Timeline</h6>
+                    <div id="content">
+                        <ul class="timeline">
+                            <li class="event" data-date="Wild West Summary:What became known as the Wild West began in 1865 and lasted until 1900. This time became notorious for gunslingers, Indian wars, gritty lawmen, dangerous outlaws, business tycoons, and American pioneers pushing to the edge of the continent. ">
+                                <h3>1860's</h3>
+                                <p>The West had been expanding since the Louisiana purchase, but the era known as the Wild West did not begin until after the Civil War. The Civil War had changed everything in America. The South could no longer enslave human beings and soldiers that returned from war returned to a much different way of life.
 
-                    <div class="hori-timeline" dir="ltr">
-                        <ul class="list-inline events">
-                            <li class="list-inline-item event-list">
-                                <div class="px-4">
-                                    <div class="event-date bg-soft-primary text-primary">Date</div>
-                                    <h5 class="font-size-16">Event One</h5>
-                                    <p class="text-muted">Wild West Info</p>
-                                    <div>
-                                        <a href="#" class="btn btn-primary btn-sm">Read more</a>
-                                    </div>
-                                </div>
+                                    Native Americans became the next target of conquest for the expanding Americans and many of the earlier outlaws were Civil War veterans. </p>
                             </li>
-                            <li class="list-inline-item event-list">
-                                <div class="px-4">
-                                    <div class="event-date bg-soft-success text-success">Date</div>
-                                    <h5 class="font-size-16">Event Two</h5>
-                                    <p class="text-muted">Wild West Info</p>
-                                    <div>
-                                        <a href="#" class="btn btn-primary btn-sm">Read more</a>
-                                    </div>
-                                </div>
+                            <li class="event" data-date="">
+                                <h3>1870's</h3>
+                                <p>The 1870s saw the rise of the outlaw and some of the bloodiest fighting in Native American history.
+                                    Names such as: Billy The Kid, Jesse James, Cole Younger, “Wild Bill” Hickok, George Armstrong Custer, Crazy Horse, and Sitting Bull begin to appear on the pages of history. The first train robberies occur and cattle towns such as Abilene, Kansas begin to spring up.
+                                    The transcontinental railroad also connects the East to the West and begins to change A</p>
                             </li>
-                            <li class="list-inline-item event-list">
-                                <div class="px-4">
-                                    <div class="event-date bg-soft-danger text-danger">Date</div>
-                                    <h5 class="font-size-16">Event Three</h5>
-                                    <p class="text-muted">Wild West Info</p>
-                                    <div>
-                                        <a href="#" class="btn btn-primary btn-sm">Read more</a>
-                                    </div>
-                                </div>
+                            <li class="event" data-date="">
+                                <h3>1880's - 1900's</h3>
+                                <p>The west begin to become a bit more domestic and by the end of the decade Native Americans had mostly been relegated to reservations and no longer roamed freely as they had for generations.
+                                    Outlaws still roamed, but lawmen such as Wyatt Earp and Pat Garrett had hunted down many of the notorious outlaws and killed them. Billy The Kid, Jesse James, Johnny Ringo and the Cowboys would all cease to exist by the end of the decade.
+                                    Settlers flocked to land rushes where the government gave away millions of acres of land once owned by Native Americans.
+
+                                </p>
                             </li>
-                            <li class="list-inline-item event-list">
-                                <div class="px-4">
-                                    <div class="event-date bg-soft-warning text-warning">Date</div>
-                                    <h5 class="font-size-16">Event Four</h5>
-                                    <p class="text-muted">Wild West Info</p>
-                                    <div>
-                                        <a href="#" class="btn btn-primary btn-sm">Read more</a>
-                                    </div>
-                                </div>
+                            <li class="event" data-date="">
+                                <h3>1910's</h3>
+                                <p>The era of the Wild West was over, but a few remnants remained. The last stagecoach robbery occurred, but with the modernization of law enforcement the age of the outlaw was over.
+                                    By the end of the decade America had seen themselves go from a nation prone to isolation to a up and coming global power. World War 1 was fought and America’s involvement resulted in the League of Nations.
+                                    During this time, Prohibition began to see an increase in support. More cities became modernized and would usher in a time of national prosperity that became known as the Roaring 20s.</p>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <!-- end card -->
         </div>
     </div>
+</div>
     {% endblock %}
 </body>
 </html>
