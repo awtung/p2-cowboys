@@ -4,6 +4,9 @@ social_home_bp = Blueprint('aboutus', __name__,
                           template_folder='templates',
                           static_folder='static', static_url_path='assets')
 
+@social_home_bp.route('/home')
+def home():
+    return render_template("homepage.html")
 
 @social_home_bp.route('/')
 def aboutus():
