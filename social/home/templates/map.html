@@ -2,26 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>saloon</title>
+    <title>Map</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
-<div>
-    <a href="/history" ><button type="submit" class="button" style="margin-top:700px; margin-left:150px;">History</button></a>
-</div>
-
+<body>
+    <div>
+        <a href="/history"><button type="submit" class="button" style="margin-top:700px; margin-left:200px;">History</button></a>
+        <a href="/saloon"><button type="submit" class="button" style="position: relative; bottom:25px; margin-left:170px;">Saloon</button></a>
+    </div>
+    <div>
+        <a href="/aboutus"><button type="submit" class="button" style="float: right; margin-top:-85px; margin-right:150px;">About Us</button></a>
+        <a href="/randomapi"><button type="submit" class="button" style="width: 95px; height: 65px; float: right; position: relative; bottom:95px; margin-right:450px;">Random Quotes</button></a>
+    </div>
+    <div style="text-align: center;">
+        <a href="/aboutus/home"><button type="submit" class="button" style="margin-left: 580px; position: relative; bottom:350px;">Home Page</button></a>
+    </div>
+</body>
 
 <style>
     html,
     body {
       background-image: url(https://media.istockphoto.com/vectors/west-town2-vector-id1151849238?k=6&m=1151849238&s=612x612&w=0&h=QyLAnCXKhjgd7i8tIYvSX2CY8MPKXkE3A8_Tl0C25T8=); no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       background-size: cover;
-      background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed
+      resize: both;
     }
     table, td, th {
         border: 1px solid var(--dblue);
@@ -46,6 +52,8 @@
         padding: 10px 10px;
         text-align: center;
         text-decoration: none;
+        width: 80px;
+        height: 65px;
       }
       @keyframes glowing {
         0% {
@@ -65,6 +73,5 @@
         animation: glowing 1300ms infinite;
       }
 </style>
-
 
 </html>
