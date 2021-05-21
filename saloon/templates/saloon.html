@@ -1,26 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>saloon</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-</head>
+
 {% extends "home.html" %}
 
 {% block content %}
-
-
-
-    <style>
-    html,
-    body {
-      background-image: url(https://i.pinimg.com/originals/c3/e8/d3/c3e8d3c67333e1dfa449c7777c5939ce.jpg); no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
 </style>
+<body>
+
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+    <!-- About Section -->
+    <div class="w3-row w3-padding-64" id="about">
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+            <img src="https://i.pinimg.com/originals/c3/e8/d3/c3e8d3c67333e1dfa449c7777c5939ce.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+        </div>
+
+        <div class="w3-col m6 w3-padding-large">
+            <h1 class="w3-center">Welcome to the Saloon</h1><br>
+            <h5 class="w3-center">Play different type of games here</h5>
+            <p class="w3-large">This is a game that Aiden made second trimester with wild west trivia. <span class="w3-tag w3-light-grey">Wild West</span> Quiz.</p>
+        </div>
+    </div>
+    <div id="quiz"></div>
+    <button id="submit">Get Results</button>
+    <div id="results"></div>
+
+    <h1>Wild West Trivia</h1>
+    <p>Good Luck! :)</p>
+    <p>(Questions updated every week)</p>
+    <head>
+        <style>
+
+
+
+
+
+
+
+body{
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #333;
+  text-align: center;
+}
+.question{
+  font-weight: 600;
+  text-align: center;
+}
+.answers {
+    margin-bottom: 20px;
+    text-align: center;
+}
+#submit{
+  font-family: sans-serif;
+  font-size: 20px;
+  background-color: #297;
+  color: #fff;
+  border: 0px;
+  border-radius: 3px;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#submit:hover{
+  background-color: #3a8;
+  text-align: center;
+}
+
+#score{
+background-color: black;
+height:50px;
+width:140px;
+top:10px;
+left:540px;
+font-size:30px;
+}
+#board{
+position:absolute;
+width:5000px;
+height:300px;
+}
+#background{
+position:absolute;
+width:700px;
+height:500px;
+}
+#ball{
+position:absolute;
+width:70px;
+height:70px;
+top: 410px;
+left: 300px;
+}
+#goalie{
+position:absolute;
+width:100px;
+top:200px;
+left:300px;
+}
+#rules{
+position:absolute;
+top:0px;
+left:730px;
+}
+
+
+</style>
+    </head>
+    <body>
+
+
+
+    </body>
+</html>
+
+
+
+
+
+<script>
+var myQuestions = [
+  {
+    question: "What do Cowboys say when they greet each other?",
+    answers: {
+      a: 'howdy',
+      b: 'hi',
+      c: 'hello'
+    },
+    correctAnswer: 'a'
+  },
+  {
+    question: "What is the real name of Billy the Kid",
+    answers: {
+      a: 'Levi Ross',
+      b: 'Candice Howard',
+      c: 'Henry McCarty'
+    },
+    correctAnswer: 'c'
+  },
+  {
+    question: "In poker, what is known as the Dead Man's Hand?",
+    answers: {
+      a: 'Aces & Fours',
+      b: 'Aces & Queens',
+      c: 'Aces & Eights'
+    },
+    correctAnswer: 'c'
+  },
+  {
+    question: "Which outlaw was part of the famous Gunfight at the O.K. Corral?",
+    answers: {
+      a: 'Billy Clanton',
+      b: 'Billy The Kid',
+      c: 'Jesse James'
+    },
+    correctAnswer: 'a'
+  },
+  {
+    question: "The Gunfight at the O.K. Corral will live forever in history. How long did the confrontation last?",
+    answers: {
+      a: '30 seconds',
+      b: '1 hour',
+      c: 'A day'
+    },
+    correctAnswer: 'a'
+  }
+];
+
+var quizContainer = document.getElementById('quiz');
+var resultsContainer = document.getElementById('results');
+var submitButton = document.getElementById('submit');
+
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+  function showQuestions(questions, quizContainer){
+    //store output and answer choices
+    var output = [];
+    var answers;
+
+    // for each question...
+    for(var i=0; i<questions.length; i++){
+
+      // reset list of answers
+      answers = [];
+
+
+      for(letter in questions[i].answers){
+
+        // add a button
+        answers.push(
+          '<label>'
+            + '<input type="radio" name="question'+i+'" value="'+letter+'">'
+            + letter + ': '
+            + questions[i].answers[letter]
+          + '</label>'
+        );
+      }
+
+      // add this question and its answers to the output
+      output.push(
+        '<div class="question">' + questions[i].question + '</div>'
+        + '<div class="answers">' + answers.join('') + '</div>'
+      );
+    }
+
+    // combine output list into one string of html
+    quizContainer.innerHTML = output.join('');
+  }
+
+
+  function showResults(questions, quizContainer, resultsContainer){
+
+    // get answer containers from quiz
+    var answerContainers = quizContainer.querySelectorAll('.answers');
+
+    // keep track of answers
+    var userAnswer = '';
+    var numCorrect = 0;
+
+    // for each question
+    for(var i=0; i<questions.length; i++){
+
+      // find selected answer
+      userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+
+      // if answer is correct
+      if(userAnswer===questions[i].correctAnswer){
+        // add to the number of correct answers
+        numCorrect++;
+
+        // color the answers green
+        answerContainers[i].style.color = 'lightgreen';
+      }
+      // if answer is wrong
+      else{
+        // color the answers red
+        answerContainers[i].style.color = 'red';
+      }
+    }
+
+    // show total score
+    resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+  }
+
+  // show questions right away
+  showQuestions(questions, quizContainer);
+
+  // on submit show results
+  submitButton.onclick = function(){
+    showResults(questions, quizContainer, resultsContainer);
+  }
+
+}
+    </script>
+
+
+
+
+<!-- Menu Section -->
+    <div class="w3-row w3-padding-64" id="menu">
+        <div class="w3-col l6 w3-padding-large">
+            <h1 class="w3-center">Snake Game</h1><br>
+            <h4>Green Rattlesnake</h4>
+            <p class="w3-text-grey">Eating an assortment of fresh red apples but be careful don't eat yourself</p><br>
+            <body>
+            <canvas width="400" height="400" id="game"></canvas>
+            <script>
+var canvas = document.getElementById('game');
+var context = canvas.getContext('2d');
+
+var grid = 16;
+var count = 0;
+
+var snake = {
+  x: 160,
+  y: 160,
+
+  // snake velocity. moves one grid length every frame in either the x or y direction
+  dx: grid,
+  dy: 0,
+
+  // keep track of all grids the snake body occupies
+  cells: [],
+
+  // length of the snake. grows when eating an apple
+  maxCells: 4
+};
+var apple = {
+  x: 320,
+  y: 320
+};
+
+// get random whole numbers in a specific range
+// @see https://stackoverflow.com/a/1527820/2124254
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+// game loop
+function loop() {
+  requestAnimationFrame(loop);
+
+  // slow game loop to 15 fps instead of 60 (60/15 = 4)
+  if (++count < 4) {
+    return;
+  }
+
+  count = 0;
+  context.clearRect(0,0,canvas.width,canvas.height);
+
+  // move snake by it's velocity
+  snake.x += snake.dx;
+  snake.y += snake.dy;
+
+  // wrap snake position horizontally on edge of screen
+  if (snake.x < 0) {
+    snake.x = canvas.width - grid;
+  }
+  else if (snake.x >= canvas.width) {
+    snake.x = 0;
+  }
+
+  // wrap snake position vertically on edge of screen
+  if (snake.y < 0) {
+    snake.y = canvas.height - grid;
+  }
+  else if (snake.y >= canvas.height) {
+    snake.y = 0;
+  }
+
+  // keep track of where snake has been. front of the array is always the head
+  snake.cells.unshift({x: snake.x, y: snake.y});
+
+  // remove cells as we move away from them
+  if (snake.cells.length > snake.maxCells) {
+    snake.cells.pop();
+  }
+
+  // draw apple
+  context.fillStyle = 'red';
+  context.fillRect(apple.x, apple.y, grid-1, grid-1);
+
+  // draw snake one cell at a time
+  context.fillStyle = 'green';
+  snake.cells.forEach(function(cell, index) {
+
+    // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
+    context.fillRect(cell.x, cell.y, grid-1, grid-1);
+
+    // snake ate apple
+    if (cell.x === apple.x && cell.y === apple.y) {
+      snake.maxCells++;
+
+      // canvas is 400x400 which is 25x25 grids
+      apple.x = getRandomInt(0, 25) * grid;
+      apple.y = getRandomInt(0, 25) * grid;
+    }
+
+    // check collision with all cells after this one (modified bubble sort)
+    for (var i = index + 1; i < snake.cells.length; i++) {
+
+      // snake occupies same space as a body part. reset game
+      if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+        snake.x = 160;
+        snake.y = 160;
+        snake.cells = [];
+        snake.maxCells = 4;
+        snake.dx = grid;
+        snake.dy = 0;
+
+        apple.x = getRandomInt(0, 25) * grid;
+        apple.y = getRandomInt(0, 25) * grid;
+      }
+    }
+  });
+}
+
+// listen to keyboard events to move the snake
+document.addEventListener('keydown', function(e) {
+  // prevent snake from backtracking on itself by checking that it's
+  // not already moving on the same axis (pressing left while moving
+  // left won't do anything, and pressing right while moving left
+  // shouldn't let you collide with your own body)
+
+  // left arrow key
+  if (e.which === 37 && snake.dx === 0) {
+    snake.dx = -grid;
+    snake.dy = 0;
+  }
+  // up arrow key
+  else if (e.which === 38 && snake.dy === 0) {
+    snake.dy = -grid;
+    snake.dx = 0;
+  }
+  // right arrow key
+  else if (e.which === 39 && snake.dx === 0) {
+    snake.dx = grid;
+    snake.dy = 0;
+  }
+  // down arrow key
+  else if (e.which === 40 && snake.dy === 0) {
+    snake.dy = grid;
+    snake.dx = 0;
+  }
+});
+
+// start the game
+requestAnimationFrame(loop);
+</script>
+            </body>
+
+        </div>
+
+        <div class="w3-col l6 w3-padding-large">
+            <img src="https://media.istockphoto.com/vectors/viper-snake-mascot-vector-id630008844?k=6&m=630008844&s=612x612&w=0&h=w9vVGwyKIsPlmeMqmcvJZVVY9kLdoMJnqChMI_0D2_g=" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+
+        </div>
+    </div>
+
+    <hr>
+
+
+</body>
+</html>
+
     {% endblock %}
 
 </html>
