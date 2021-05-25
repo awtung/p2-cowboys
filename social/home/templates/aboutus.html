@@ -64,6 +64,9 @@
             display: block;
             margin: 0 auto;
         }
+        .BgClass {
+            background-image: url('https://i.ibb.co/HBGxfq4/Desert-seamless-background-Wild-west-game-outdoor-western-canyon-landscape-with-stones-rock-sand-cac.jpg');
+        }
 
     </style>
 </head>
@@ -71,9 +74,17 @@
 {% extends "home.html" %}
 
 {% block content %}
+<input style="float:right; margin-top: 40px;" type="button" id="btnBack" value="Toggle Light/Dark Mode" />
+
+<script>
+    var btnBack = document.getElementById('btnBack');
+btnBack.addEventListener('click',function() {
+    document.body.classList.toggle('BgClass');
+});
+</script>
 </br>
 </br>
-<h1 style="font-family: Palatino; color: white; text-align: center">About Us</h1>
+<h1 style="font-family: Palatino; color: white; text-align: center; margin-left: 220px;">About Us</h1>
 </br>
 </br>
 <h2 style="font-family: Palatino; color: white; text-align: center">Click on the image profiles to learn more about the creators!</h2>

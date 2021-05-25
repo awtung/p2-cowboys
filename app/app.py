@@ -32,8 +32,8 @@ app.register_blueprint(saloon_saloon_bp, url_prefix='/saloon')
 
 
 @app.route('/')
-def map():
-    return render_template("map.html")
+def homenav():
+    return render_template("homenav.html")
 
 @app.route('/randomapi/', methods=['GET', 'POST'])
 def quote():

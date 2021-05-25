@@ -2,21 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Map</title>
+    <title>Home</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
+<input style="float:right; margin-top: 20px;" type="button" id="btnBack" value="Toggle Light/Dark Mode" />
+
+<script>
+    var btnBack = document.getElementById('btnBack');
+btnBack.addEventListener('click',function() {
+    document.body.classList.toggle('BgClass');
+});
+</script>
+
+<center><h1 style="margin-left: 200px; margin-top: 40px; color: white;" ><i>WANTED</i></h1></center>
+<center><p></p></center>
+<center><p>Welcome to WANTED, a wild west themed website full of cool, unique and interactive features.</p></center>
+<br/>
+<center><p>Creators:</p></center>
+<center><p>Nathan Lee, Dane Vestal, Noah Pidding, and Aiden Tung (Scrum Master)</p></center>
+
     <div>
-        <a href="/history"><button type="submit" class="button" style="margin-top:700px; margin-left:200px;">History</button></a>
+        <a href="/history"><button type="submit" class="button" style="margin-top:400px; margin-left:200px;">History</button></a>
         <a href="/saloon"><button type="submit" class="button" style="position: relative; bottom:25px; margin-left:170px;">Saloon</button></a>
     </div>
     <div>
-        <a href="/aboutus"><button type="submit" class="button" style="float: right; margin-top:-85px; margin-right:150px;">About Us</button></a>
-        <a href="/randomapi"><button type="submit" class="button" style="width: 95px; height: 65px; float: right; position: relative; bottom:95px; margin-right:450px;">Random Quotes</button></a>
-    </div>
-    <div style="text-align: center;">
-        <a href="/aboutus/home"><button type="submit" class="button" style="margin-left: 580px; position: relative; bottom:350px;">Home Page</button></a>
+        <a href="/aboutus"><button type="submit" class="button" style="float: right; margin-top:-85px; margin-right:140px;">About Us</button></a>
+        <a href="/randomapi"><button type="submit" class="button" style="width: 95px; height: 65px; float: right; position: relative; bottom:95px; margin-right:430px;">Random Quotes</button></a>
     </div>
 </body>
 
@@ -24,6 +37,9 @@
     html,
     body {
       background-image: url(https://media.istockphoto.com/vectors/west-town2-vector-id1151849238?k=6&m=1151849238&s=612x612&w=0&h=QyLAnCXKhjgd7i8tIYvSX2CY8MPKXkE3A8_Tl0C25T8=); no-repeat center center fixed;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
@@ -72,6 +88,18 @@
       .button {
         animation: glowing 1300ms infinite;
       }
+      .BgClass {
+          background-image: url('https://i.ibb.co/0mt3dn1/Western-town-Vector-illustration-in-cartoon-style.jpg');
+      }
+    h1 {
+        font-size: 50px;
+        }
+    p {
+        color: white;
+        font-size: 150%;
+        margin-left: 30px;
+        position: relative;
+        }
 </style>
 
 </html>

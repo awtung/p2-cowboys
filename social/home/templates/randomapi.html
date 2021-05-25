@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-    <title>p2Cowboys</title>
+    <title>Random API's</title>
     <style>
     body {
       background-image: url(https://i.ytimg.com/vi/7fg7w04B6fQ/maxresdefault.jpg); no-repeat center center fixed;
@@ -12,6 +12,8 @@
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed
     }
 
     p {
@@ -20,6 +22,9 @@
         top: 300px;
         position: relative;
         }
+    .BgClass {
+    background-image: url('https://i.ibb.co/jWRw91t/Screenshot-2021-04-20-153019-2.png');
+    }
     </style>
 
 </head>
@@ -27,6 +32,14 @@
 {% extends "home.html" %}
 
 {% block content %}
+<input style="float:right; margin-top: 40px;" type="button" id="btnBack" value="Toggle Light/Dark Mode" />
+
+<script>
+    var btnBack = document.getElementById('btnBack');
+btnBack.addEventListener('click',function() {
+    document.body.classList.toggle('BgClass');
+});
+</script>
 <center><h1 class="headertitle" style = "color:black"><marquee behavior=alternate width=”202″ scrollamount=”8″ scrolldelay=”95″ height=”37″ bgcolor=”#FFFFFF”> Random API's</marquee></h1></center>
 <center><p></p></center>
 
