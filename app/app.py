@@ -68,7 +68,7 @@ def quote():
     end1 = ',"ur'
     quote1 = response.text[response.text.find(start1)+len(start1):response.text.find(end1)+len(start1)-5]
 
-    quote = quote1 + " - " + random.choice(['Noah Pidding','Nathan Lee','Aiden Tung'])
+    quote = quote1 + " - " + random.choice(['Noah Pidding','Nathan Lee','Aiden Tung', 'Dane Vestal'])
 
     return render_template("randomapi.html", Title="Home", loginUsername='', logged_in=0, quote=quote)
 
