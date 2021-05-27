@@ -1,6 +1,6 @@
 #imports
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from social.home.app import social_home_bp
 from History.app import History_history_bp
 from database.app import database_bp
@@ -27,13 +27,23 @@ app.register_blueprint(MiniLabs_Aiden_bp, url_prefix='/MiniLabs/Aiden')
 app.register_blueprint(bubblesort_Noahbubblesort_bp, url_prefix='/bubblesort/Noahbubble')
 app.register_blueprint(bubblesort_Aidenbubblesort_bp, url_prefix='/bubblesort/Aidenbubble')
 app.register_blueprint(bubblesort_Nathanbubblesort_bp, url_prefix='/bubblesort/Nathanbubble')
-app.register_blueprint(bubblesort_Danebubblesort_bp, url_prefix='/Dane_bubble/')
+app.register_blueprint(bubblesort_Danebubblesort_bp, url_prefix='/bubblesort/Danebubble/')
 app.register_blueprint(saloon_saloon_bp, url_prefix='/saloon')
 
 
 @app.route('/')
 def homenav():
     return render_template("homenav.html")
+
+
+@app.route('/Clicker')
+def clicker():
+    if request.method == "POST":
+        form = request.form
+        print (form["name"])
+        print (form["score"])
+    return render_template("Clicker.html")
+
 
 @app.route('/randomapi/', methods=['GET', 'POST'])
 def quote():
@@ -61,6 +71,7 @@ def quote():
     quote = quote1 + " - " + random.choice(['Noah Pidding','Nathan Lee','Aiden Tung'])
 
     return render_template("randomapi.html", Title="Home", loginUsername='', logged_in=0, quote=quote)
+
 
 #run file
 if __name__ == "__main__":

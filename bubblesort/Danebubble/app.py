@@ -9,7 +9,7 @@ bubblesort_Danebubblesort_bp = Blueprint('Danebubblesort', __name__,
                                           template_folder='templates',
                                           static_folder='static', static_url_path='assets')
 
-@bubblesort_Danebubble_bp.route('/Danebubble')
+@bubblesort_Danebubble_bp.route('/Dane_bubble')
 def Danebubble():
     return render_template("Danebubble.html")
 
