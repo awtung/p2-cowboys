@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campfire</title>
+</head>
+<body>
+<form method = "post">
+    <!-- user message input -->
+    <h2 style="color: black;">Enter Your Wild West Name:</h2>
+    <input name="Cowboy" id="Cowboy" type="text" style="width: 75px;" >
+
+    <!-- shows buttons, gives them functions -->
+    <p><button class="button"  formaction = "/campfire">Rest</button></p>
+    {% for new_cowboy in cowboys %}
+    <li>{{new_cowboy.name}}</li>
+    {% endfor %}
+</form>
+</body>
+</html>
