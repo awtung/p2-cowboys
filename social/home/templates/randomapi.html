@@ -57,6 +57,14 @@ btnBack.addEventListener('click',function() {
     <input type="submit" value="New Word">
 </form>
 
+<h1 style="color:Green;">Random joke</h1>
+<p style="background-color:black; color:blue; margin-right:1200px; font:impact; font-size:20px">{{joke}}</p>
+<p class="setup" style="color:Green">Click for joke.</p>
+<form method="POST" ID="myForm" action=/randomapi3/ >
+    <input type="submit" value="New joke">
+</form>
+
+
 
 {% endblock %}
 

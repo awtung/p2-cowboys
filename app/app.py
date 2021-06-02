@@ -114,6 +114,41 @@ def word():
 
     return render_template("randomapi.html", Title="Home", loginUsername='', logged_in=0, word=word)
 
+@app.route('/randomapi3/', methods=['GET', 'POST'])
+def joke():
+
+    import requests
+
+    url = "https://geek-jokes.p.rapidapi.com/api"
+
+    querystring = {"format":"json"}
+
+    headers = {
+        'x-rapidapi-key': "0b02e40e95mshf25e231823c3218p14b56fjsned0b8e81d2a5",
+        'x-rapidapi-host': "geek-jokes.p.rapidapi.com"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+
+    joke2 = response.text
+
+    joke = joke2
+
+    return render_template("randomapi.html", Title="Home", loginUsername='', logged_in=0, joke=joke)
+
+
+@app.route('/add_info', methods=['POST'])
+def add_info():
+    info_data = request.get_json()
+
+    new_info = Info(name=info_data['name'], age=info_data['age'], language=info_data['language'])
+
+    db.session.add(new_info)
+    db.session.commit()
+
+    return 'Done', 201
+
 #run file
 if __name__ == "__main__":
      db.create_all()
