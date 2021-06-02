@@ -7,3 +7,6 @@ History_history_bp = Blueprint('History', __name__,
 def history():
     return render_template("history.html")
 
+@History_history_bp.route('/historyquiz')
+def historyquiz():
+    return render_template("historyquiz.html")

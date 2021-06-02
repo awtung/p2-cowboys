@@ -1,0 +1,213 @@
+{% extends "home.html" %}
+
+{% block content %}
+
+<div id="quiz"></div>
+<button id="submit">Get Results</button>
+<div id="results"></div>
+
+<h1>Wild West History Quiz</h1>
+<p>Good Luck! 🐎 </p>
+<p>(Questions updated every week)</p>
+<head>
+    <style>
+
+
+
+
+
+
+
+body{
+
+ background-image: url(https://media.istockphoto.com/illustrations/old-west-town-illustration-id98345036?k=6&m=98345036&s=612x612&w=0&h=M6dfoQ1fEMCfmONRusdp5jGUnWqTn4ElgVbTmAwTtgk=); no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #333;
+  text-align: center;
+}
+.question{
+  font-weight: 600;
+  text-align: center;
+}
+.answers {
+    margin-bottom: 20px;
+    text-align: center;
+}
+#submit{
+  font-family: sans-serif;
+  font-size: 20px;
+  background-color: #297;
+  color: #fff;
+  border: 0px;
+  border-radius: 3px;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#submit:hover{
+  background-color: #3a8;
+  text-align: center;
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+</body>
+</html>
+
+
+
+
+
+<script>
+var myQuestions = [
+  {
+    question: "The era known as the wild west did not begin until after what?",
+    answers: {
+      a: 'Civil War',
+      b: 'World War 2',
+      c: '1970'
+    },
+    correctAnswer: 'a'
+  },
+  {
+    question: "Which of the following is a famous outlaw?",
+    answers: {
+      a: 'Shooty Sam',
+      b: 'Jesse Gunslinger',
+      c: 'Billy the Kid'
+    },
+    correctAnswer: 'c'
+  },
+  {
+    question: "Which of the following was a lawmen that hunted Outlaws?",
+    answers: {
+      a: 'George Armstrong',
+     b: 'Johhny West',
+     c: 'Pat Garrett'
+
+    },
+    correctAnswer: 'c'
+  },
+  {
+    question: "What timeframe was considered the Wild West?",
+   answers: {
+     a: '1865-1900',
+     b: '1800-1850',
+     c: '1820-1860'
+
+    },
+    correctAnswer: 'a'
+  },
+  {
+    question: "What year was the rise of the outlaws?",
+    answers: {
+      a: '1870s',
+      b: '1880s',
+      c: '1890s'
+    },
+    correctAnswer: 'a'
+  }
+];
+
+var quizContainer = document.getElementById('quiz');
+var resultsContainer = document.getElementById('results');
+var submitButton = document.getElementById('submit');
+
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+  function showQuestions(questions, quizContainer){
+    //store output and answer choices
+    var output = [];
+    var answers;
+
+    // for each question...
+    for(var i=0; i<questions.length; i++){
+
+      // reset list of answers
+      answers = [];
+
+
+      for(letter in questions[i].answers){
+
+        // add a button
+        answers.push(
+          '<label>'
+            + '<input type="radio" name="question'+i+'" value="'+letter+'">'
+            + letter + ': '
+            + questions[i].answers[letter]
+          + '</label>'
+        );
+      }
+
+      // add this question and its answers to the output
+      output.push(
+        '<div class="question">' + questions[i].question + '</div>'
+        + '<div class="answers">' + answers.join('') + '</div>'
+      );
+    }
+
+    // combine output list into one string of html
+    quizContainer.innerHTML = output.join('');
+  }
+
+
+  function showResults(questions, quizContainer, resultsContainer){
+
+    // get answer containers from quiz
+    var answerContainers = quizContainer.querySelectorAll('.answers');
+
+    // keep track of answers
+    var userAnswer = '';
+    var numCorrect = 0;
+
+    // for each question
+    for(var i=0; i<questions.length; i++){
+
+      // find selected answer
+      userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+
+      // if answer is correct
+      if(userAnswer===questions[i].correctAnswer){
+        // add to the number of correct answers
+        numCorrect++;
+
+        // color the answers green
+        answerContainers[i].style.color = 'lightgreen';
+      }
+      // if answer is wrong
+      else{
+        // color the answers red
+        answerContainers[i].style.color = 'red';
+      }
+    }
+
+    // show total score
+    resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+  }
+
+  // show questions right away
+  showQuestions(questions, quizContainer);
+
+  // on submit show results
+  submitButton.onclick = function(){
+    showResults(questions, quizContainer, resultsContainer);
+  }
+
+}
+    </script>
+
+{% endblock %}

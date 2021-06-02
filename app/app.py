@@ -90,6 +90,29 @@ def quote():
 
     return render_template("randomapi.html", Title="Home", loginUsername='', logged_in=0, quote=quote)
 
+@app.route('/randomapi2/', methods=['GET', 'POST'])
+def word():
+    # call to random quote web api
+    import requests
+
+    url = "https://random-words-with-pronunciation.p.rapidapi.com/word"
+
+    headers = {
+        'x-rapidapi-key': "be43b38cedmsh17c4689e2c1a95fp18da84jsnd77b7103f602",
+        'x-rapidapi-host': "random-words-with-pronunciation.p.rapidapi.com"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    start2 = 'rd":'
+    end2 = '"pro'
+    word2 = response.text[response.text.find(start2)+len(start2):response.text.find(end2)+len(start2)-5]
+
+    word = word2
+
+
+
+    return render_template("randomapi.html", Title="Home", loginUsername='', logged_in=0, word=word)
 
 #run file
 if __name__ == "__main__":

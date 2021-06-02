@@ -31,3 +31,4 @@ def Noah():
 @social_home_bp.route('/history')
 def history():
     return render_template("history.html")
+
