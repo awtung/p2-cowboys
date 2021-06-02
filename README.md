@@ -11,8 +11,8 @@
 
 Our scrum board consists of several columns in which we record our overall team goals, as well as weekly assignments for individuals (tickets). The scrum master (Aiden) tracks the progress made by the group as a whole, and logs whether something may still be in progress, or whether it has been completed. 
 
-# Umbrella Tickets
-[Week of 6/1/2021]()
+# Umbrella Tickets (Week of 6/1/2021)
+[Umbrella Ticket](https://github.com/awtung/p2-cowboys/issues/42)
 
 [Aiden's Umbrella Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-61728573)
 
