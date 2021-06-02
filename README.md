@@ -15,7 +15,8 @@ Our scrum board consists of several columns in which we record our overall team 
 [Week of 6/1/2021]()
 
 [Aiden's Umbrella Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-61728573)
-[Noah's Umbrella Ticket]()
+
+[Noah's Umbrella Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-61127561)
 
 
 
