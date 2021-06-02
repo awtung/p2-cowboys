@@ -7,7 +7,7 @@ from database.app import database_bp
 from chat.app import chat_bp
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Integer, Column, String
-from flask_login import UserMixin
+
 from MiniLabs.Noah.app import MiniLabs_Noah_bp
 from MiniLabs.Nathan.app import MiniLabs_Nathan_bp
 from MiniLabs.Dane.app import MiniLabs_Dane_bp
@@ -36,7 +36,7 @@ app.register_blueprint(bubblesort_Danebubblesort_bp, url_prefix='/bubblesort/Dan
 app.register_blueprint(saloon_saloon_bp, url_prefix='/saloon')
 
 
-class Cowboy(UserMixin, db.Model):
+class Cowboy( db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(250), unique=False)
 
