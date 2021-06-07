@@ -39,3 +39,11 @@ def Noahindividual():
 @social_home_bp.route('/Dane')
 def Daneindividual():
     return render_template("daneindividual.html")
+
+@social_home_bp.route('/Aiden')
+def Aidenindividal():
+    return render_template("aidenindividual.html")
+
+@social_home_bp.route('/Nathan')
+def Nathanindividal():
+    return render_template("nathanindividual.html")
