@@ -32,3 +32,10 @@ def Noah():
 def history():
     return render_template("history.html")
 
+@social_home_bp.route('/Noah')
+def Noahindividual():
+    return render_template("noahindividual.html")
+
+@social_home_bp.route('/Dane')
+def Daneindividual():
+    return render_template("daneindividual.html")

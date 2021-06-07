@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>About Us</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+          background-image: url(https://i.ibb.co/2jc3xPd/Desert-seamless-background-Wild-west-game-outdoor-western-canyon-landscape-with-stones-rock-sand-cac.jpg); no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
+
+        body_about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #34495e;
+        }
+
+        .cards_about {
+            color: #323030;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card_about {
+            border-radius: 10px;
+            margin: 40px;
+            position: relative;
+            max-width: 250px;
+            max-height: 350px;
+            background-color: moccasin;
+            box-shadow: 10px 20px 50px -30px black;
+        }
+
+        .card-title_about {
+            display: block;
+            text-align: center;
+            color: #78788c;
+            background-color: moccasin;
+            padding: 2%;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        .card_about img {
+            width: 80%;
+            height: 80%;
+            align-content: center;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        img.center {
+            display: block;
+            margin: 0 auto;
+        }
+        .BgClass {
+            background-image: url('https://i.ibb.co/HBGxfq4/Desert-seamless-background-Wild-west-game-outdoor-western-canyon-landscape-with-stones-rock-sand-cac.jpg');
+        }
+
+    </style>
+</head>
+<body>
+{% extends "home.html" %}
+
+{% block content %}
+<input style="float:right; margin-top: 40px;" type="button" id="btnBack" value="Toggle Light/Dark Mode" />
+
+<script>
+    var btnBack = document.getElementById('btnBack');
+btnBack.addEventListener('click',function() {
+    document.body.classList.toggle('BgClass');
+});
+</script>
+</br>
+</br>
+<h1 style="font-family: Palatino; color: white; text-align: center; margin-left: 220px;">Dane Vestal</h1>
+</br>
+</br>
+<h2 style="font-family: Palatino; color: white; text-align: center">Click on the images to explore more about Dane Vestal and the work he has done!</h2>
+<div class="cards_about">
+    <div class="card_about">
+        <h2 style="font-size: 20pt" class="card-title_about"><b style="font-family: serif; margin-right: 0.3em; color: black" class="fab fa-html5"> About Me </b></h2>
+            <a href="/aboutus/DaneVestal"> <img class="center" src="https://i.ibb.co/jr15xkj/File-002.png" alt=""></a>
+    </div>
+    <div class="card_about">
+        <h2 style="font-size: 20pt" class="card-title_about"><b style="font-family: serif; margin-right: 0.3em; color: black" class="fab fa-html5"> MiniLab </b></h2>
+            <a href= "/MiniLabs/Dane/DaneLab"> <img class="center" src="https://i.ibb.co/HCyLy5T/IMG-5289.jpg" alt=""></a>
+    </div>
+    <div class="card_about">
+        <h2 style="font-size: 20pt" class="card-title_about"><b style="font-family: serif; margin-right: 0.3em; color: black" class="fab fa-html5"> Bubble Sort </b></h2>
+            <a href= "/bubblesort/Danebubble/Dane_bubble"> <img class="center" src="" alt=""></a>
+    </div>
+    <div class="card_about">
+        <h2 style="font-size: 20pt" class="card-title_about"><b style="font-family: serif; margin-right: 0.3em; color: black" class="fab fa-html5"> Digital Portfolio </b></h2>
+            <a href= ""> <img class="center" src="" alt=""></a>
+    </div>
+
+
+</div>
+{% endblock %}
+</body>
+</html>
