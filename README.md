@@ -22,7 +22,7 @@ Our scrum board consists of several columns in which we record our overall team 
 
 
 # Link to Website
-[WANTED]()
+[Cowboy Town]()
 
 # Scrum Board Overview
 [Scrum Board](https://github.com/awtung/p2-cowboys/projects/1)
