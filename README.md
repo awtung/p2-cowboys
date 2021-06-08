@@ -39,7 +39,7 @@ Aiden Tung (scrum master), Dane Vestal, Nathan Lee, Noah Pidding
 Our group is going with a website with the features similar to those of popular social media apps, including instagram and facebook, where we are going to attempt to allow users to upload images onto our website so they can be shared. Also we may attempt to add some sort of chat feature, where users are able to chat with one another while on our website. This is just a start, and we will probably have to come up with more features that would be a good fit for our website, as these current features mentioned 
 
 # Final Week Plan
-
+For this final week, we are planning on fulfilling the final project requirements. Aiden and Noah are working on the individual sections. For the individual section, we are going to use the about us page, with images of each member and have indivdual pages, where images will be linked to some information about them, their minilab, their bubble sort and their digital portfolio. This will help with the requirement of the individual section of the final project, making it more organized and quality as opposed to havin gall the links on a nav bar. Dane will be working on the deployment of the project on Mr Mortenson's pi. This is a key requirement for the prject, as we need to have the website deployed for the N@TM final showcase. Nathan will be working on the Crossover API for the project. This is important as one of the sections of the final project requirements requires an API.
 
 
 # Week 2
