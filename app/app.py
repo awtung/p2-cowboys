@@ -6,6 +6,7 @@ from History.app import History_history_bp
 from database.app import database_bp
 from chat.app import chat_bp
 from flask_sqlalchemy import SQLAlchemy
+from hotel.app import Hotel_hotel_bp
 from sqlalchemy import Integer, Column, String
 
 from MiniLabs.Noah.app import MiniLabs_Noah_bp
@@ -34,6 +35,10 @@ app.register_blueprint(bubblesort_Aidenbubblesort_bp, url_prefix='/bubblesort/Ai
 app.register_blueprint(bubblesort_Nathanbubblesort_bp, url_prefix='/bubblesort/Nathanbubble')
 app.register_blueprint(bubblesort_Danebubblesort_bp, url_prefix='/bubblesort/Danebubble/')
 app.register_blueprint(saloon_saloon_bp, url_prefix='/saloon')
+app.register_blueprint(Hotel_hotel_bp, url_prefix='/hotel')
+app.register_blueprint(Hotel_hotel_bp, url_prefix='/hotel/room1')
+app.register_blueprint(Hotel_hotel_bp, url_prefix='/hotel/room2')
+app.register_blueprint(Hotel_hotel_bp, url_prefix='/hotel/room3')
 
 
 class Cowboy( db.Model):
@@ -88,7 +93,7 @@ def quote():
 
     quote = quote1 + " - " + random.choice(['Noah Pidding','Nathan Lee','Aiden Tung', 'Dane Vestal'])
 
-    return render_template("randomapi.html", Title="Home", loginUsername='', logged_in=0, quote=quote)
+    return render_template("room1.html", Title="Home", loginUsername='', logged_in=0, quote=quote)
 
 @app.route('/randomapi2/', methods=['GET', 'POST'])
 def word():
@@ -112,7 +117,7 @@ def word():
 
 
 
-    return render_template("randomapi.html", Title="Home", loginUsername='', logged_in=0, word=word)
+    return render_template("room2.html", Title="Home", loginUsername='', logged_in=0, word=word)
 
 @app.route('/randomapi3/', methods=['GET', 'POST'])
 def joke():
@@ -135,7 +140,7 @@ def joke():
 
     joke = joke2
 
-    return render_template("randomapi.html", Title="Home", loginUsername='', logged_in=0, joke=joke)
+    return render_template("room3.html", Title="Home", loginUsername='', logged_in=0, joke=joke)
 
 
 @app.route('/add_info', methods=['POST'])
