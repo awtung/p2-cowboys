@@ -47,3 +47,4 @@ def Aidenindividal():
 @social_home_bp.route('/Nathan')
 def Nathanindividal():
     return render_template("nathanindividual.html")
+
