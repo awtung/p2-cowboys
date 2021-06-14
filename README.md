@@ -6,7 +6,7 @@
 #### Dane Vestal - 
 
 
-# Scrum Board Overview
+# Scrum Board Overview (How our website was created)
 [Scrum Board](https://github.com/awtung/p2-cowboys/projects/1)
 
 Our scrum board consists of several columns in which we record our overall team goals, as well as weekly assignments for individuals (tickets). The scrum master (Aiden) tracks the progress made by the group as a whole, and logs whether something may still be in progress, or whether it has been completed. 
