@@ -11,14 +11,6 @@
 
 Our scrum board consists of several columns in which we record our overall team goals, as well as weekly assignments for individuals (tickets). The scrum master (Aiden) tracks the progress made by the group as a whole, and logs whether something may still be in progress, or whether it has been completed. The tickets contain links to our code and live demo videos of the running code.
 
-# Umbrella Tickets (Week of 6/1/2021)
-[Umbrella Ticket](https://github.com/awtung/p2-cowboys/issues/42)
-
-[Aiden's Umbrella Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-61728573)
-
-[Noah's Umbrella Ticket](https://github.com/awtung/p2-cowboys/projects/1#card-61127561)
-
-
 
 
 # Link to Website
@@ -32,16 +24,16 @@ Our scrum board consists of several columns in which we record our overall team 
 # Project Plan
 ### Members: 
 Aiden Tung (scrum master), Dane Vestal, Nathan Lee, Noah Pidding
-### Journals: 
-[Aiden's Journal]() | [Dane's Journal]() | [Nathan's Journal]() | [Noah's Journal](https://docs.google.com/document/d/1x-iEoBSRU_3NTZzQx9B2KsI-111CswKRkTgCjxuuqH4/edit?usp=sharing)
+
+Our group is going with a western themed website with many different things to do and explore. We are going to try and create games, quizzes, some sort of database system, WebAPI's, and make the website feel very wild western themed, much like our group name, the Cowboys.
 
 
-Our group is going with a website with the features similar to those of popular social media apps, including instagram and facebook, where we are going to attempt to allow users to upload images onto our website so they can be shared. Also we may attempt to add some sort of chat feature, where users are able to chat with one another while on our website. This is just a start, and we will probably have to come up with more features that would be a good fit for our website, as these current features mentioned 
+# Below shows our teams final week plan outline, our initial minilab code, and our week 1 goals to establish the basis of the website. The rest of our tickets can be found linked above on our scrum board, which goes more into detail abut our goals.
 
-# Final Week Plan
+# Final Week Plan Outline
 For this final week, we are planning on fulfilling the final project requirements. Aiden and Noah are working on the individual sections. For the individual section, we are going to use the about us page, with images of each member and have indivdual pages, where images will be linked to some information about them, their minilab, their bubble sort and their digital portfolio. This will help with the requirement of the individual section of the final project, making it more organized and quality as opposed to havin gall the links on a nav bar. Dane will be working on the deployment of the project on Mr Mortenson's pi. This is a key requirement for the prject, as we need to have the website deployed for the N@TM final showcase. Nathan will be working on touching up the format and HTML of our website. There appear to be several errors and formatting issues throughout the website, so Nathan will be working to fix these, especially the formatting of the home page, and the formatting of the API page. This is important for the final project, as we want the website to look as nice and as organized as possible for the N@TM showcase. 
 
-# Week 2
+
 ## Mini Labs:
 ### Aiden's Mini Lab 5/5
 [Link to app.py code](https://github.com/awtung/p2-cowboys/blob/main/MiniLabs/Aiden/app.py) |
@@ -87,7 +79,7 @@ For this final week, we are planning on fulfilling the final project requirement
 4) Data / Getters ([Code](https://github.com/awtung/p2-cowboys/blob/8c0b8096bcc21e176420460b3050a52e33558446/MiniLabs/Noah/Noah.py#L37-L68)): Used getters to be able to get data from the object "factorial" and then displayed the data by rendering it on an html file
 5) WOW ([Code](https://github.com/awtung/p2-cowboys/blob/8c0b8096bcc21e176420460b3050a52e33558446/MiniLabs/Noah/templates/NoahLab.html#L1-L78)): HTML code is nicely formatted, with nice themed background, animated title and a easy to navigate UI that allows the user to input a number for the series and the page will display the final number in the series, the whole list of the series and the build up of each number in the sequence. 
 
-# Week 1 
+
 ## Team Goals (Week 1)
 1) Come up with a project idea for the trimester, which we all agree on and invloves growth
 2) Create the foundation of the website, including a home page, nav bar and brief about us section
