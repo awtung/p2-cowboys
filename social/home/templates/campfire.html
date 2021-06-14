@@ -1,16 +1,21 @@
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Campfire</title>
 </head>
+{% extends "home.html" %}
 
-
-
+{% block content %}
 <body>
 <form method = "post">
     <!-- user message input -->
-    <h2 style="color: black;">Enter Your Wild West Name:</h2>
+    <h2 style="color: red;">Enter Your Wild West Name to forever be a part of our website!:</h2>
     <input name="Cowboy" id="Cowboy" type="text" style="width: 75px;" >
 
     <!-- shows buttons, gives them functions -->
@@ -25,10 +30,12 @@
 
 <style>
     body {
-                background-image: url(https://st2.depositphotos.com/3649089/9346/v/600/depositphotos_93465868-stock-illustration-bonfire-with-marshmallow.jpg); no-repeat center center fixed;
+                background-image: url(https://cdn5.vectorstock.com/i/1000x1000/15/54/background-with-forest-camp-fire-vector-21441554.jpg); no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
 
     </style>
+
+{% endblock %}
